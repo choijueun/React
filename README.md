@@ -13,3 +13,21 @@ MAIN PAGE (index.html과 비슷)
 	npm start
 
 project 경로로 들어가서 터미널에 명령어 수행
+
+
+### Node.js 설치
+
+npm 툴 사용 가능
+
+create-react-app 라이브러리 사용 가능
+
+
+
+
+
+
+
+
+
+
+
