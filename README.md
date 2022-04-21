@@ -10,7 +10,7 @@
 
 ## React Project
 
-### create react project
+### create project
 
 	npx create-react-app (project명)
 
