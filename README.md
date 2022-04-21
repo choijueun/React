@@ -21,12 +21,22 @@
 project 경로로 들어가서 터미널에 명령어 수행
 
 
+## JS
 ### App.js
 
-MAIN PAGE (index.html과 비슷)
+	src>App.js
 
+MAIN PAGE 구성
 
+### index.js
 
+	src>index.js
+
+App.js에서 그린 내용을 index.html에 삽입
+
+### index.html
+
+index html template
 
 
 
