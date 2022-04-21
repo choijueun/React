@@ -25,33 +25,33 @@ project 경로로 들어가서 터미널에 명령어 수행
 
 ### folders
 
-	src
+`src`
 
 source code folder
 
-	public
+`public`
 
 static 파일 모은 폴더
 
-	node_modules
+`node_modules`
 
 라이브러리 모은 폴더
 
 ### files
 
-	package.json
+`package.json`
 
 설치한 라이브러리 목록
 
-	src>App.js
+`src>App.js`
 
 MAIN PAGE 구성
 
-	src>index.js
+`src>index.js`
 
 App.js에서 그린 내용을 index.html에 삽입
 
-	public>index.html
+`public>index.html`
 
 index html template
 
