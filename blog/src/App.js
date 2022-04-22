@@ -9,6 +9,12 @@ function App() {
                 <div style={ {color:'blue', fontSize: '30px'} }>개발 Blog</div>
             </div>
             <h4>{ posts }</h4>
+
+            <div className="list">
+                <h3>{ posts }</h3>
+                <p>2022년 04월 22일</p>
+                <hr/>
+            </div>
         </div>
     );
 }
