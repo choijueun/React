@@ -1,4 +1,5 @@
 import './App.css';
+import logo from './logo.svg'
 
 function App() {
     let posts = '양재동 맛집';
@@ -13,6 +14,7 @@ function App() {
             </div>
             <h4>{ posts }</h4>
             <h3>{ Fn() }</h3>
+            <img src={logo}/>
         </div>
     );
 }
