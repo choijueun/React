@@ -4,6 +4,7 @@ import './App.css';
 function App() {
     // let posts = '양재동 맛집';
     let [title, mTitle] = useState( ['하데스타운', '레베카', '라흐마니노프'] );
+    let [recm, mRecm] = useState(0);
 
     return (
         <div className="App">
@@ -13,7 +14,7 @@ function App() {
 
             <div className="list">
                 <h3>{ title[0] }</h3>
-                <p>2022년 02월 15일 <span onClick={ ()=>{} }>👍</span> 0</p>
+                <p>2022년 02월 15일 <span onClick={ ()=>{ console.log(1) } }>👍</span> { recm }</p>
                 <hr/>
             </div>
             <div className="list">
