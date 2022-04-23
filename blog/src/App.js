@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
     // let posts = '양재동 맛집';
-    let [title, mTitle] = useState('양재동 맛집');
+    let [title, mTitle] = useState( ['하데스타운', '레베카', '라흐마니노프'] );
 
     return (
         <div className="App">
@@ -12,8 +12,18 @@ function App() {
             </div>
 
             <div className="list">
-                <h3>{ title }</h3>
-                <p>2022년 04월 22일</p>
+                <h3>{ title[0] }</h3>
+                <p>2022년 02월 15일</p>
+                <hr/>
+            </div>
+            <div className="list">
+                <h3>{ title[1] }</h3>
+                <p>2022년 02월 26일</p>
+                <hr/>
+            </div>
+            <div className="list">
+                <h3>{ title[2] }</h3>
+                <p>2022년 03월 01일</p>
                 <hr/>
             </div>
         </div>
