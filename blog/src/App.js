@@ -12,6 +12,13 @@ function App() {
                 <div style={ {color:'blue', fontSize: '30px'} }>개발 Blog</div>
             </div>
 
+            <button className="changeBtn" onClick={
+                ()=>{
+                    let tmpTitle = ['노트르담 드 파리', {title}[1], {title}[2]];
+                    mTitle(tmpTitle);
+                }
+            }>버튼</button>
+
             <div className="list">
                 <h3>{ title[0] }</h3>
                 <p>2022년 02월 15일 <span className="recmBtn" onClick={ ()=>{ mRecm( recm+1 ) } }>👍</span> {recm}</p>
