@@ -14,7 +14,7 @@ function App() {
 
             <div className="list">
                 <h3>{ title[0] }</h3>
-                <p>2022년 02월 15일 <span className="recmBtn" onClick={ ()=>{ mRecm( {recm}+1 ) } }>👍</span> { recm }</p>
+                <p>2022년 02월 15일 <span className="recmBtn" onClick={ ()=>{ mRecm( recm+1 ) } }>👍</span> {recm}</p>
                 <hr/>
             </div>
             <div className="list">
