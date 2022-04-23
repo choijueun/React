@@ -13,7 +13,7 @@ function App() {
 
             <div className="list">
                 <h3>{ title[0] }</h3>
-                <p>2022년 02월 15일</p>
+                <p>2022년 02월 15일 <span onClick={ ()=>{} }>👍</span> 0</p>
                 <hr/>
             </div>
             <div className="list">
