@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
     // let posts = '양재동 맛집';
-    let [title, mdTitle] = useState('양재동 맛집');
+    let [title, mTitle] = useState('양재동 맛집');
 
     return (
         <div className="App">
