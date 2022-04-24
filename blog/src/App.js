@@ -4,6 +4,11 @@ import './App.css';
 function App() {
     // let posts = '양재동 맛집';
     let [title, mTitle] = useState( ['하데스타운', '레베카', '라흐마니노프'] );
+    let [contents, updateContent] = useState( [
+        {'title': '하데스타운', 'date': '2022-02-15'}
+        ,{'title': '레베카', 'date': '2022-02-26'}
+        ,{'title': '라흐마니노프', 'date': '2022-03-01'}
+    ])
     let [recm, mRecm] = useState(0);
     function changeTitle() {
         // 복사(deep copy) spread operator
