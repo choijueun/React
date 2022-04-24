@@ -49,7 +49,7 @@ function App() {
                 <hr/>
             </div>
 
-            <Modal></Modal>
+            <Modal/>
         </div>
     );
 }
