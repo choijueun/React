@@ -22,10 +22,6 @@ function App() {
         var tmpArr = [...contents];
         var tmpTitle = []
         var tmpDate = []
-        for(i=0; i<tmpArr.length; i++){
-            tmpTitle.append(tmpArr[i]['title']);
-            tmpDate.append(tmpArr[i]['date']);
-        }
         //모르겠다
     }
     return (
