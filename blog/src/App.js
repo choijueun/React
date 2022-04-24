@@ -24,31 +24,22 @@ function App() {
                 <div style={ {fontSize: '30px'} }>개발 Blog</div>
             </div>
 
-            {/* 
-            <button className="changeBtn" onClick={
-                ()=>{
-                    let tmpTitle = ['노트르담 드 파리', {title}[1], {title}[2]];
-                    mTitle(tmpTitle);
-                }
-            }>버튼</button> 
-            */}
-
             {/* changeTitle() : 바로 실행되므로 함수명만 작성 */}
-            <button onClick={ changeTitle }>제목바꾸기</button>
+            <button onClick={  }>정렬</button>
 
             <div className="list">
-                <h3>{ title[0] }</h3>
-                <p>2022년 02월 15일 <span className="recmBtn" onClick={ ()=>{ mRecm( recm+1 ) } }>👍</span> {recm}</p>
+                <h3>{ contents[0]['title'] }</h3>
+                <p>{ contents[0]['date'] } <span className="recmBtn" onClick={ ()=>{ mRecm( recm+1 ) } }>👍</span> {recm}</p>
                 <hr/>
             </div>
             <div className="list">
-                <h3>{ title[1] }</h3>
-                <p>2022년 02월 26일</p>
+                <h3>{ contents[1]['title'] }</h3>
+                <p>{ contents[1]['date'] }</p>
                 <hr/>
             </div>
             <div className="list">
-                <h3>{ title[2] }</h3>
-                <p>2022년 03월 01일</p>
+                <h3>{ contents[2]['title'] }</h3>
+                <p>{ contents[2]['date'] }</p>
                 <hr/>
             </div>
         </div>
