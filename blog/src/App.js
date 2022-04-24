@@ -18,6 +18,9 @@ function App() {
         // state data 변경
         mTitle(tmpArr);
     }
+    function sortTitle() {
+
+    }
     return (
         <div className="App">
             <div className="black-nav">
@@ -25,7 +28,7 @@ function App() {
             </div>
 
             {/* changeTitle() : 바로 실행되므로 함수명만 작성 */}
-            <button onClick={  }>정렬</button>
+            <button onClick={ sortTitle }>정렬</button>
 
             <div className="list">
                 <h3>{ contents[0]['title'] }</h3>
