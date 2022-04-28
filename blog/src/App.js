@@ -28,15 +28,27 @@ function App() {
 }
 
 function Home() {
-    return <h2>Home</h2>;
+    return(
+        <div>
+            <h2>Home</h2>
+        </div>
+    );
 }
 
 function About() {
-    return <h2>About</h2>;
+    return(
+        <div>
+            <h2>About</h2>
+        </div>
+    );
 }
 
 function Users() {
-    return <h2>Users</h2>;
+    return(
+        <div>
+            <h2>Users</h2>
+        </div>
+    );
 }
 
 export default App;
