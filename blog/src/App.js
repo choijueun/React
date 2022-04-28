@@ -7,16 +7,21 @@ import {
     Link
   } from "react-router-dom";
 
+import LandingPage from './components/views/LandingPage/LandingPage'
+import LoginPage from './components/views/LoginPage/LoginPage'
+import RegisterPage from './components/views/RegisterPage/RegisterPage'
+
+
 function App() {
     return (
         <Router>
             <div>
                 <Routes>
-                    <Route path="/about" element={ <About /> }>
+                    <Route path="/register" element={ <RegisterPage/> }>
                     </Route>
-                    <Route path="/users" element={ <Users /> }>
+                    <Route path="/login" element={ <LoginPage/> }>
                     </Route>
-                    <Route path="/" element={ <Home /> }>
+                    <Route path="/" element={ <LandingPage /> }>
                     </Route>
                 </Routes>
             </div>
