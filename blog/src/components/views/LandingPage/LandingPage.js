@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import axios from 'axios'
 
+import NavBar from '../NavBar/NavBar'
+
 function LandingPage(props) {
     // Hook
     useEffect(()=>{
@@ -11,7 +13,7 @@ function LandingPage(props) {
     return (
         <div>
             <h1>{props.title}</h1>
-            LandingPage
+            <NavBar topics={topics}/>
         </div>
     )
 }
