@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import axios from 'axios'
 
-function LandingPage() {
+function LandingPage(props) {
     // Hook
     useEffect(()=>{
         axios.get('/api/hello')
@@ -10,6 +10,7 @@ function LandingPage() {
 
     return (
         <div>
+            <h1>{props.title}</h1>
             LandingPage
         </div>
     )

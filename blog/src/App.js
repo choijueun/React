@@ -21,7 +21,7 @@ function App() {
                     </Route>
                     <Route path="/login" element={ <LoginPage/> }>
                     </Route>
-                    <Route path="/" element={ <LandingPage /> }>
+                    <Route path="/" element={ <LandingPage title="MAIN" /> }>
                     </Route>
                 </Routes>
             </div>
