@@ -10,6 +10,9 @@ function NavBar(props) {
     return (
         <div>
             NavBar
+            <ol>
+                {lis}
+            </ol>
         </div>
     )
 }
