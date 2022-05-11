@@ -4,11 +4,20 @@ import axios from 'axios'
 import NavBar from '../NavBar/NavBar'
 
 function LandingPage(props) {
+    const mode = 'WELCOME';
+
     const topics = [
         {id: 1, title: 'html', body: 'html is ...'}
         , {id: 2, title: 'css', body: 'css is ...'}
         , {id: 3, title: 'javascript', body: 'javascript is ...'}
     ]
+
+    let content = null;
+    if (mode === 'WELCOME'){
+        content = <p>Hello, Web</p>
+    }else if (mode === 'READ') {
+        content = <p>Hello, Read</p>
+    }
 
     // Hook
     // useEffect(()=>{
