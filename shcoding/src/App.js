@@ -13,12 +13,15 @@ function App() {
     ]
 
     const [id, setId] = useState(null);
+    function setContent(_id){
+        setId(_id);
+    }
 
     return (
         <>
             <Header></Header>
-            <NavBar topics={topics} onSetContent={}></NavBar>
-            <Content></Content>
+            <NavBar topics={topics} onSetContent={setContent}></NavBar>
+            <Content id={id}></Content>
         </>
     );
 }
