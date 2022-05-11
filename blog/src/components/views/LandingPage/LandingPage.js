@@ -5,14 +5,14 @@ import { useState } from 'react';
 import NavBar from '../NavBar/NavBar'
 
 function LandingPage(props) {
-    const [mode, setMode] = useState('WELCOME');
-
     const topics = [
         {id: 1, title: 'html', body: 'html is ...'}
         , {id: 2, title: 'css', body: 'css is ...'}
         , {id: 3, title: 'javascript', body: 'javascript is ...'}
     ]
-
+    
+    const [mode, setMode] = useState('WELCOME');
+    
     let content = null;
     if (mode === 'WELCOME') {
         content = <p>Hello, Web</p>
