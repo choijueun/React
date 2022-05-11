@@ -7,12 +7,11 @@ import Create from './components/views/Create/Create'
 import {useState} from 'react'
 
 function App() {
-    const topics = [
+    const [topics, setTopics] = useState([
         {id:1, title:'HTML', body:'html is ...'}
         ,{id:2, title:'CSS', body:'css is ...'}
         ,{id:3, title:'JavaScript', body:'javascript is ...'}
-    ]
-
+    ]);
     const [mode, setMode] = useState('MAIN');
     const [id, setId] = useState(null);
 
