@@ -1,19 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-function Create() {
-
+function Create(props) {
+    const createSubmit = function(){
+        props.onCreate();
+    }
 
     return (
         <>
         <h2>CREATE</h2>
-        <form id="createForm">
+        <form id="createForm" onSubmit={createSubmit}>
             <div>
                 <input type="text" name="title" placeholder='TITLE'></input>
             </div>
             <div>
                 <textarea name="content" placeholder='CONTENT'></textarea>
             </div>
-            <button type="button" className="submitBtn">SUBMIT</button>
+            <input type="submit" className="submitBtn" value="SUBMIT"/>
         </form>
         </>
     )
