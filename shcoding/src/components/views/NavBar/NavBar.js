@@ -8,7 +8,8 @@ function NavBar(props) {
         lis.push(<li key={tmp.id}>
                 <a id={tmp.id} href="#" onClick={event=>{
                     event.preventDefault();
-                    alert(event.target.id);
+                    //alert(event.target.id);
+                    props.onSetContent(event.target.id);
                 }}>{tmp.title}</a>
             </li>)
     }

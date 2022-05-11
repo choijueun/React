@@ -21,7 +21,7 @@ function App() {
         <>
             <Header></Header>
             <NavBar topics={topics} onSetContent={setContent}></NavBar>
-            <Content id={id}></Content>
+            <Content id={id}>{id}</Content>
         </>
     );
 }
