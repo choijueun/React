@@ -30,9 +30,11 @@ function LandingPage(props) {
             <h1><a href="/" onClick={function(event){
                 event.preventDefault(); //기본동작 방지: reload X
                 props.onChangeMode();
+                mode = 'WELCOME';
             }}>{props.title}</a></h1>
             <NavBar topics={topics} onChangeMode={(id)=>{
                 alert(id);
+                mode = 'READ';
             }}/>
         </div>
     )
