@@ -9,7 +9,7 @@ function NavBar(props) {
                 <a id={tmp.id} href="#" onClick={event=>{
                     event.preventDefault();
                     //alert(event.target.id);
-                    props.onSetContent(event.target.id);
+                    props.onChangeMode(event.target.id);
                 }}>{tmp.title}</a>
             </li>)
     }

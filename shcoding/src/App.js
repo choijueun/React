@@ -12,6 +12,11 @@ function App() {
         ,{id:3, title:'JavaScript', body:'javascript is ...'}
     ]
 
+    const [mode, setMode] = useState('MAIN');
+    function setPage(_mode) {
+        setMode(_mode);
+    }
+
     const [id, setId] = useState(null);
     function setContent(_id){
         setId(_id);
@@ -19,8 +24,13 @@ function App() {
 
     return (
         <>
-            <Header></Header>
-            <NavBar topics={topics} onSetContent={setContent}></NavBar>
+            <Header onChangeMode={()=>{
+                setMode('MAIN');
+            }}></Header>
+            <NavBar topics={topics} onChangeMode={(_id)=>{
+                setMode('CONTENTS');
+                setContent(_id);
+            }}></NavBar>
             <Content id={id} topics={topics}></Content>
         </>
     );
