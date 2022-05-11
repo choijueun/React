@@ -2,7 +2,7 @@ import React from 'react'
 
 function Create() {
 return (
-    <div id="create">
+    <form id="create">
         <div>
             <input type="text" placeholder='TITLE'></input>
         </div>
@@ -10,7 +10,7 @@ return (
             <textarea placeholder='CONTENT'></textarea>
         </div>
         <button className="submitBtn">SUBMIT</button>
-    </div>
+    </form>
     )
 }
 
