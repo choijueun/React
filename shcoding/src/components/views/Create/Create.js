@@ -4,7 +4,7 @@ function Create() {
 return (
     <>
     <h2>CREATE</h2>
-    <form id="create">
+    <form id="createForm">
         <div>
             <input type="text" name="title" placeholder='TITLE'></input>
         </div>
