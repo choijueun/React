@@ -19,7 +19,7 @@ function LandingPage(props) {
         content = <p>Hello, Web</p>
     }else if (mode === 'READ') {
         for(let i=0; i<topics.length; i++){
-            if (topics[i]['id'] == id) {
+            if (topics[i]['id'] === id) {
                 content = <>
                     <h1>{topics[i]['title']}</h1>
                     <p>Hello, Read</p>
@@ -46,7 +46,7 @@ function LandingPage(props) {
             <NavBar topics={topics} onChangeMode={(_id)=>{
                 //alert(id);
                 setMode('READ');
-                setId(_id);
+                setId(Number(_id));
             }}/>
             {content}
         </div>
