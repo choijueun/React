@@ -15,21 +15,19 @@ function App() {
     const [mode, setMode] = useState('MAIN');
     const [id, setId] = useState(null);
 
+    let createTopic = (title, body)=>{
+        console.log(title, body);
+        let new_topics = [...topics];
+        console.log(new_topics);
+    }
+
     let content = null;
     if (mode === 'MAIN') {
         content = <div>Hello, World.</div>
     }else if (mode === 'CONTENTS') {
         content = <Content id={id} topics={topics}></Content>
     }else if (mode === 'CREATE') {
-        content = <Create onCreate={(title, body)=>{
-            let new_id = 0;
-            for(let i=0; i<topics.length; i++) {
-                new_id = topics[i].id + 1;
-            }
-            const new_topic = {id: new_id, title: title, body: body};
-            topics.push(new_topic);       
-            console.log(new_topic);
-        }}></Create>
+        content = <Create onCreate={createTopic}></Create>
     }
 
     return (
