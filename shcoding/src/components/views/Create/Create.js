@@ -2,9 +2,8 @@ import React, { useEffect } from 'react'
 
 function Create(props) {
     const createSubmit = function(){
-        const title = document.querySelector('#createForm [name=title]');
-        const content = document.querySelector('#createForm [name=content]');
-        props.onCreate(title.value, content.value);
+        const createForm = document.querySelector('#createForm');
+        props.onCreate(createForm.title.value, createForm.content.value);
     }
 
     return (
