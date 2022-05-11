@@ -2,9 +2,12 @@ import React from 'react'
 
 function Header(props) {
     return (
-        <h1 onClick={()=>{
-            props.onChangeMode();
-        }}>React - 생활코딩</h1>
+        <h1>
+            <a href="#" onClick={event=>{
+                event.preventDefault();
+                props.onChangeMode();
+            }}>React - 생활코딩</a>
+        </h1>
     )
 }
 

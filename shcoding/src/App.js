@@ -15,6 +15,13 @@ function App() {
     const [mode, setMode] = useState('MAIN');
     const [id, setId] = useState(null);
 
+    let content = null;
+    if (mode === 'MAIN') {
+        content = <div>Hello, World.</div>
+    }else if (mode === 'CONTENTS') {
+        content = <Content id={id} topics={topics}></Content>
+    }
+
     return (
         <>
             <Header onChangeMode={()=>{
@@ -24,7 +31,7 @@ function App() {
                 setMode('CONTENTS');
                 setId(_id);
             }}></NavBar>
-            <Content id={id} topics={topics}></Content>
+            {content}
         </>
     );
 }
