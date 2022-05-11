@@ -13,14 +13,7 @@ function App() {
     ]
 
     const [mode, setMode] = useState('MAIN');
-    function setPage(_mode) {
-        setMode(_mode);
-    }
-
     const [id, setId] = useState(null);
-    function setContent(_id){
-        setId(_id);
-    }
 
     return (
         <>
@@ -29,7 +22,7 @@ function App() {
             }}></Header>
             <NavBar topics={topics} onChangeMode={(_id)=>{
                 setMode('CONTENTS');
-                setContent(_id);
+                setId(_id);
             }}></NavBar>
             <Content id={id} topics={topics}></Content>
         </>
