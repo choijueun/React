@@ -6,7 +6,7 @@ function NavBar(props) {
         let tmp = props.topics[i];
         lis.push(<li key={tmp.id}><a id={tmp.id} href={'/read/'+tmp.id} onClick={event=>{
             event.preventDefault();
-            props.onChangeMode(event.target.id);
+            //props.onChangeMode(event.target.id);
         }}>{tmp.title}</a></li>)
     }
 
