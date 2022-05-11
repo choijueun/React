@@ -36,6 +36,7 @@ function LandingPage(props) {
                 alert(id);
                 mode = 'READ';
             }}/>
+            {content}
         </div>
     )
 }
