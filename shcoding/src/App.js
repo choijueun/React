@@ -23,7 +23,13 @@ function App() {
         content = <Content id={id} topics={topics}></Content>
     }else if (mode === 'CREATE') {
         content = <Create onCreate={(title, body)=>{
-            console.log(title, body);
+            let new_id = 0;
+            for(let i=0; i<topics.length; i++) {
+                new_id = topics[i].id + 1;
+            }
+            const new_topic = {id: new_id, title: title, body: body};
+            topics.push(new_topic);       
+            console.log(new_topic);
         }}></Create>
     }
 
