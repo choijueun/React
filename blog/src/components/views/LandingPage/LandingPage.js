@@ -18,7 +18,9 @@ function LandingPage(props) {
 
     return (
         <div>
-            <h1>{props.title}</h1>
+            <h1><a href="/" onClick={function(event){
+
+            }}>{props.title}</a></h1>
             <NavBar topics={topics}/>
         </div>
     )
