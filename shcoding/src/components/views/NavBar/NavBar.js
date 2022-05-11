@@ -1,8 +1,12 @@
 import React from 'react'
 
 function NavBar() {
+    const lis = []
+
   return (
-    <div>NavBar</div>
+    <ol>
+        {lis}
+    </ol>
   )
 }
 
