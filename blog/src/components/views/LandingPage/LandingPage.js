@@ -5,7 +5,7 @@ import { useState } from 'react';
 import NavBar from '../NavBar/NavBar'
 
 function LandingPage(props) {
-    const mode = 'WELCOME';
+    const mode = useState('WELCOME');
 
     const topics = [
         {id: 1, title: 'html', body: 'html is ...'}
