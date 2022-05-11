@@ -14,7 +14,11 @@ function LandingPage(props) {
     ]
 
     let content = null;
-    content = <p>Hello, Web</p>
+    if (mode === 'WELCOME') {
+        content = <p>Hello, Web</p>
+    }else if (mode === 'READ') {
+        content = <p>Hello, Read</p>
+    }
 
     // Hook
     // useEffect(()=>{
