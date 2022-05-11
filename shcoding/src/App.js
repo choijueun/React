@@ -20,6 +20,7 @@ function App() {
         content = <div>Hello, World.</div>
     }else if (mode === 'CONTENTS') {
         content = <Content id={id} topics={topics}></Content>
+    }else if (mode === 'CREATE') {
     }
 
     return (
@@ -31,6 +32,9 @@ function App() {
                 setMode('CONTENTS');
                 setId(_id);
             }}></NavBar>
+            <button onClick={()=>{
+                setMode('CREATE');
+            }}>CREATE</button>
             {content}
         </>
     );
