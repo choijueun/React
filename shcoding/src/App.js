@@ -22,7 +22,9 @@ function App() {
     }else if (mode === 'CONTENTS') {
         content = <Content id={id} topics={topics}></Content>
     }else if (mode === 'CREATE') {
-        content = <Create></Create>
+        content = <Create onCreate={(title, body)=>{
+            console.log(document.getElementById('createForm'));
+        }}></Create>
     }
 
     return (
