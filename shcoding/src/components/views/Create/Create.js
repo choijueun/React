@@ -9,6 +9,7 @@ return (
         <div>
             <textarea placeholder='CONTENT'></textarea>
         </div>
+        <button className="submitBtn">SUBMIT</button>
     </div>
     )
 }
