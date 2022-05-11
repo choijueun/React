@@ -23,7 +23,7 @@ function App() {
         content = <Content id={id} topics={topics}></Content>
     }else if (mode === 'CREATE') {
         content = <Create onCreate={(title, body)=>{
-            console.log(document.querySelector('#createForm'));
+            console.log(title, body);
         }}></Create>
     }
 

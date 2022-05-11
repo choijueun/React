@@ -2,20 +2,24 @@ import React, { useEffect } from 'react'
 
 function Create(props) {
     const createSubmit = function(){
-        props.onCreate();
+        const title = document.querySelector('#createForm [name=title]');
+        const content = document.querySelector('#createForm [name=content]');
+        props.onCreate(title.value, content.value);
     }
 
     return (
         <>
         <h2>CREATE</h2>
-        <form id="createForm" onSubmit={createSubmit}>
+        <form id="createForm">
             <div>
                 <input type="text" name="title" placeholder='TITLE'></input>
             </div>
             <div>
                 <textarea name="content" placeholder='CONTENT'></textarea>
             </div>
-            <input type="submit" className="submitBtn" value="SUBMIT"/>
+            <button type="button" className="submitBtn"onClick={createSubmit}>
+                SUBMIT
+            </button>
         </form>
         </>
     )
