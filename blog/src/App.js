@@ -21,7 +21,9 @@ function App() {
                     </Route>
                     <Route path="/login" element={ <LoginPage/> }>
                     </Route>
-                    <Route path="/" element={ <LandingPage title="MAIN" /> }>
+                    <Route path="/" element={ <LandingPage title="MAIN" onChangeMode={function(){
+                        alert('HI');
+                    }}/> }>
                     </Route>
                 </Routes>
             </div>
