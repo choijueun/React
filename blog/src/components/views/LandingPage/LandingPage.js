@@ -44,7 +44,7 @@ function LandingPage(props) {
                 setMode('WELCOME');
             }}>{props.title}</a></h1>
             <NavBar topics={topics} onChangeMode={(_id)=>{
-                alert(id);
+                //alert(id);
                 setMode('READ');
                 setId(_id);
             }}/>
