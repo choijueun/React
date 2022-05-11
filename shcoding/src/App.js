@@ -2,6 +2,7 @@ import './App.css';
 import Header from './components/views/Header/Header'
 import NavBar from './components/views/NavBar/NavBar'
 import Content from './components/views/Content/Content'
+import Create from './components/views/Create/Create'
 
 import {useState} from 'react'
 
@@ -21,6 +22,7 @@ function App() {
     }else if (mode === 'CONTENTS') {
         content = <Content id={id} topics={topics}></Content>
     }else if (mode === 'CREATE') {
+        content = <Create></Create>
     }
 
     return (
