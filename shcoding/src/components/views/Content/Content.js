@@ -6,7 +6,7 @@ function Content(props) {
     let title = '';
     let content = '';
     for (let i=0; i<topics.length; i++){
-        if (topics[i].id == props.id) {
+        if (topics[i].id === Number(props.id)) {
             title = <h1>{topics[i].title}</h1>;
             content = <div>{topics[i].body}</div>
         }
