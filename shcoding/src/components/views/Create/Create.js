@@ -6,12 +6,12 @@ return (
     <h2>CREATE</h2>
     <form id="create">
         <div>
-            <input type="text" placeholder='TITLE'></input>
+            <input type="text" name="title" placeholder='TITLE'></input>
         </div>
         <div>
-            <textarea placeholder='CONTENT'></textarea>
+            <textarea name="content" placeholder='CONTENT'></textarea>
         </div>
-        <button className="submitBtn">SUBMIT</button>
+        <button type="button" className="submitBtn">SUBMIT</button>
     </form>
     </>
     )
