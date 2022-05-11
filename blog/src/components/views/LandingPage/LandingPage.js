@@ -5,7 +5,7 @@ import { useState } from 'react';
 import NavBar from '../NavBar/NavBar'
 
 function LandingPage(props) {
-    const mode = useState('WELCOME');
+    const [mode, setMode] = useState('WELCOME');
 
     const topics = [
         {id: 1, title: 'html', body: 'html is ...'}
@@ -14,11 +14,7 @@ function LandingPage(props) {
     ]
 
     let content = null;
-    if (mode === 'WELCOME'){
-        content = <p>Hello, Web</p>
-    }else if (mode === 'READ') {
-        content = <p>Hello, Read</p>
-    }
+    content = <p>Hello, Web</p>
 
     // Hook
     // useEffect(()=>{
@@ -31,11 +27,9 @@ function LandingPage(props) {
             <h1><a href="/" onClick={function(event){
                 event.preventDefault(); //기본동작 방지: reload X
                 props.onChangeMode();
-                mode = 'WELCOME';
             }}>{props.title}</a></h1>
             <NavBar topics={topics} onChangeMode={(id)=>{
                 alert(id);
-                mode = 'READ';
             }}/>
             {content}
         </div>
