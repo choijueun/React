@@ -12,15 +12,23 @@ function LandingPage(props) {
     ]
     
     const [mode, setMode] = useState('WELCOME');
+    const [id, setId] = useState(null);
     
     let content = null;
     if (mode === 'WELCOME') {
         content = <p>Hello, Web</p>
     }else if (mode === 'READ') {
-        content = <p>Hello, Read</p>
+        for(let i=0; i<topics.length; i++){
+            if (topics[i]['id'] == id) {
+                content = <>
+                    <h1>{topics[i]['title']}</h1>
+                    <p>Hello, Read</p>
+                    <p>{topics[i]['body']}</p>
+                </>
+            }
+        }
     }
 
-    const [id, setId] = useState(null);
 
     // Hook
     // useEffect(()=>{
