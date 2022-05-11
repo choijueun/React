@@ -20,6 +20,8 @@ function LandingPage(props) {
         content = <p>Hello, Read</p>
     }
 
+    const [id, setId] = useState(null);
+
     // Hook
     // useEffect(()=>{
     //     axios.get('/api/hello')
@@ -33,9 +35,10 @@ function LandingPage(props) {
                 props.onChangeMode();
                 setMode('WELCOME');
             }}>{props.title}</a></h1>
-            <NavBar topics={topics} onChangeMode={(id)=>{
+            <NavBar topics={topics} onChangeMode={(_id)=>{
                 alert(id);
                 setMode('READ');
+                setId(_id);
             }}/>
             {content}
         </div>
