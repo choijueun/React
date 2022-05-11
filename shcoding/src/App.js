@@ -13,7 +13,7 @@ function App() {
     return (
         <>
             <Header></Header>
-            <NavBar></NavBar>
+            <NavBar topics={topics}></NavBar>
             <Content></Content>
         </>
     );
