@@ -22,7 +22,9 @@ function LandingPage(props) {
                 event.preventDefault(); //기본동작 방지: reload X
                 props.onChangeMode();
             }}>{props.title}</a></h1>
-            <NavBar topics={topics}/>
+            <NavBar topics={topics} onChangeMode={(id)=>{
+                alert(id);
+            }}/>
         </div>
     )
 }
