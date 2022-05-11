@@ -3,6 +3,8 @@ import Header from './components/views/Header/Header'
 import NavBar from './components/views/NavBar/NavBar'
 import Content from './components/views/Content/Content'
 
+import {useState} from 'react'
+
 function App() {
     const topics = [
         {id:1, title:'HTML', body:'html is ...'}
@@ -10,10 +12,12 @@ function App() {
         ,{id:3, title:'JavaScript', body:'javascript is ...'}
     ]
 
+    const [id, setId] = useState(null);
+
     return (
         <>
             <Header></Header>
-            <NavBar topics={topics}></NavBar>
+            <NavBar topics={topics} onSetContent={}></NavBar>
             <Content></Content>
         </>
     );
