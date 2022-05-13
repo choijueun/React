@@ -16,10 +16,12 @@ function App() {
     const [id, setId] = useState(null);
     const [nextId, setNextId] = useState(4);
 
-    let createTopic = (title, body)=>{
-        console.log(title, body);
+    let createTopic = (_title, _body)=>{
+        const tmp_topic = {id:nextId, title:_title, body:_body};
         let new_topics = [...topics];
-        console.log(new_topics);
+        new_topics.push(tmp_topic);
+        setTopics(new_topics);
+        setNextId(nextId+1)
     }
 
     let content = null;
