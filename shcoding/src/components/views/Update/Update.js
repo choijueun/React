@@ -1,9 +1,11 @@
 import React from 'react'
 
 function Update(props) {
+    const topics = props.topics
+    const id = props.id
+
     const updateSubmit = function(){
         const updateForm = document.querySelector('#updateForm');
-        const id = props.id
         const title = updateForm.title.value;
         const content = updateForm.content.value;
         props.updateTopic(id, title, content);
