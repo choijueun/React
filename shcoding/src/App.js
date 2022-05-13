@@ -14,6 +14,7 @@ function App() {
     ]);
     const [mode, setMode] = useState('MAIN');
     const [id, setId] = useState(null);
+    const [nextId, setNextId] = useState(4);
 
     let createTopic = (title, body)=>{
         console.log(title, body);
