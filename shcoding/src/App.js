@@ -3,6 +3,7 @@ import Header from './components/views/Header/Header'
 import NavBar from './components/views/NavBar/NavBar'
 import Content from './components/views/Content/Content'
 import Create from './components/views/Create/Create'
+import Update from './components/views/Update/Update'
 
 import {useState} from 'react'
 
@@ -34,6 +35,8 @@ function App() {
         content = <Content id={id} topics={topics}></Content>
     }else if (mode === 'CREATE') {
         content = <Create onCreate={createTopic}></Create>
+    }else if (mode === 'UPDATE') {
+        content = <Update></Update>
     }
 
     return (
