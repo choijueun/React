@@ -22,10 +22,10 @@ function Update(props) {
         <h2>UPDATE</h2>
         <form id="updateForm">
             <div>
-                <input type="text" name="title" placeholder='TITLE' value={topic.title}></input>
+                <input type="text" name="title" placeholder='TITLE' defaultValue={topic.title}></input>
             </div>
             <div>
-                <textarea name="content" placeholder='CONTENT' value={topic.body}></textarea>
+                <textarea name="content" placeholder='CONTENT' defaultValue={topic.body}></textarea>
             </div>
             <button type="button" className="submitBtn"onClick={updateSubmit}>
                 SUBMIT
