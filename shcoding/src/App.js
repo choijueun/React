@@ -42,7 +42,7 @@ function App() {
     }else if (mode === 'CREATE') {
         content = <Create onCreate={createTopic}></Create>
     }else if (mode === 'UPDATE') {
-        content = <Update onUpdate={updateTopic}></Update>
+        content = <Update topics={topics} id={id} onUpdate={updateTopic}></Update>
     }
 
     return (
