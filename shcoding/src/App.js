@@ -55,7 +55,9 @@ function App() {
                     }}>CREATE</button>
                 </li>
                 <li>
-                    <button>UPDATE</button>
+                    <button onClick={()=>{
+                        setMode('UPDATE');
+                    }}>UPDATE</button>
                 </li>
             </ul>
         </>
