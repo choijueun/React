@@ -15,7 +15,7 @@ function Update(props) {
         const updateForm = document.querySelector('#updateForm');
         const title = updateForm.title.value;
         const content = updateForm.content.value;
-        props.updateTopic(id, title, content);
+        props.onUpdate(id, title, content);
     }
     return (
         <>
