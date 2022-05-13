@@ -2,7 +2,7 @@ import React from 'react'
 
 function Update(props) {
     const topics = props.topics;
-    const topic = null;
+    let topic = null;
     const id = Number(props.id);
 
     for(let i=0; i<topics.length; i++){
@@ -22,10 +22,10 @@ function Update(props) {
         <h2>UPDATE</h2>
         <form id="updateForm">
             <div>
-                <input type="text" name="title" placeholder='TITLE'></input>
+                <input type="text" name="title" placeholder='TITLE' value={topic.title}></input>
             </div>
             <div>
-                <textarea name="content" placeholder='CONTENT'></textarea>
+                <textarea name="content" placeholder='CONTENT' value={topic.body}></textarea>
             </div>
             <button type="button" className="submitBtn"onClick={updateSubmit}>
                 SUBMIT
