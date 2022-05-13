@@ -33,10 +33,12 @@ function App() {
     }
 
     let content = null;
+    let contenxtControl = null;
     if (mode === 'MAIN') {
         content = <div>Hello, World.</div>
     }else if (mode === 'CONTENTS') {
         content = <Content id={id} topics={topics}></Content>
+        contenxtControl = <li><button onClick={()=>{setMode('UPDATE')}}>UPDATE</button></li>
     }else if (mode === 'CREATE') {
         content = <Create onCreate={createTopic}></Create>
     }else if (mode === 'UPDATE') {
@@ -61,11 +63,7 @@ function App() {
                         setMode('CREATE');
                     }}>CREATE</button>
                 </li>
-                <li>
-                    <button onClick={()=>{
-                        setMode('UPDATE');
-                    }}>UPDATE</button>
-                </li>
+                {contenxtControl}
             </ul>
         </>
     );
