@@ -29,7 +29,16 @@ function App() {
     }
 
     let updateTopic = (_id, _title, _body)=>{
-        console.log(_id);
+        let new_topics = [...topics];
+        for(let i=0; i<new_topics.length; i++){
+            if(new_topics[i].id === Number(_id)){
+                new_topics[i] = {id: _id, title: _title, body: _body};
+            }
+        }
+        setTopics(new_topics)
+        // 수정한 글 펼치기
+        setMode('CONTENTS')
+        setId(_id)
     }
 
     let content = null;
