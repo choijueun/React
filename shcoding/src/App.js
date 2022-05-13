@@ -22,6 +22,9 @@ function App() {
         new_topics.push(tmp_topic);
         setTopics(new_topics);
         setNextId(nextId+1)
+        // 작성한 글 펼치기
+        setMode('CONTENTS')
+        setId(nextId)
     }
 
     let content = null;
