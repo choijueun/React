@@ -45,10 +45,19 @@ function App() {
                 setMode('CONTENTS');
                 setId(_id);
             }}></NavBar>
-            <button onClick={()=>{
-                setMode('CREATE');
-            }}>CREATE</button>
+
             {content}
+
+            <ul>
+                <li>
+                    <button onClick={()=>{
+                        setMode('CREATE');
+                    }}>CREATE</button>
+                </li>
+                <li>
+                    <button>UPDATE</button>
+                </li>
+            </ul>
         </>
     );
 }
