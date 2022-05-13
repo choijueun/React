@@ -28,6 +28,10 @@ function App() {
         setId(nextId)
     }
 
+    let updateTopic = (_id, _title, _body)=>{
+        console.log(_id);
+    }
+
     let content = null;
     if (mode === 'MAIN') {
         content = <div>Hello, World.</div>
@@ -36,7 +40,7 @@ function App() {
     }else if (mode === 'CREATE') {
         content = <Create onCreate={createTopic}></Create>
     }else if (mode === 'UPDATE') {
-        content = <Update></Update>
+        content = <Update onUpdate={updateTopic}></Update>
     }
 
     return (
