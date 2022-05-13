@@ -1,8 +1,15 @@
 import React from 'react'
 
 function Update(props) {
-    const topics = props.topics
-    const id = props.id
+    const topics = props.topics;
+    const topic = null;
+    const id = Number(props.id);
+
+    for(let i=0; i<topics.length; i++){
+        if(topics[i].id === id){
+            topic = topics[i];
+        }
+    }
 
     const updateSubmit = function(){
         const updateForm = document.querySelector('#updateForm');
