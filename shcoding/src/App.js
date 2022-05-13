@@ -51,7 +51,14 @@ function App() {
     }else if (mode === 'CREATE') {
         content = <Create onCreate={createTopic}></Create>
     }else if (mode === 'UPDATE') {
-        content = <Update topics={topics} id={id} onUpdate={updateTopic}></Update>
+        let topic_default = null;
+        for(let i=0; i<topics.length; i++){
+            if(topics[i].id === Number(id)){
+                topic_default = topics[i];
+            }
+        }
+        console.log(topic_default);
+        content = <Update id={id} topic={topic_default} onUpdate={updateTopic}></Update>
     }
 
     return (
