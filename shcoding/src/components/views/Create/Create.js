@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 function Create(props) {
     const createSubmit = function(){
