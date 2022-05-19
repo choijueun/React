@@ -43,6 +43,9 @@ function App() {
 
     let deleteTopic = (_id)=>{
         const deleted_topics = []
+        for(i=0; i<topics.length; i++){
+            
+        }
     }
 
     let content = null;
