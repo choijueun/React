@@ -4,4 +4,7 @@ ul {
 ul li {
     float: left;
     margin: 1em;
+    padding: .2em .5em;
+    background-color: lavender;
+    border-radius: .3em;
 }
