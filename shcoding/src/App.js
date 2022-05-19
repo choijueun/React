@@ -56,7 +56,6 @@ function App() {
                         deleted_topics.push(topics[i]);
                     }
                 }
-                console.log(id);
                 setTopics(deleted_topics);
                 setMode('MAIN');
             }}>DELETE</button></li>
