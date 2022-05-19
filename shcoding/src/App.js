@@ -41,16 +41,6 @@ function App() {
         setId(_id)
     }
 
-    let deleteTopic = (_id)=>{
-        const deleted_topics = []
-        for(let i=0; i<topics.length; i++){
-            if(topics[i].id !== _id) {
-                deleted_topics.push(topics[i]);
-            }
-        }
-        setTopics(deleted_topics);
-    }
-
     let content = null;
     let contenxtControl = null;
     if (mode === 'MAIN') {
@@ -59,7 +49,16 @@ function App() {
         content = <Content id={id} topics={topics}></Content>
         contenxtControl = <>
             <li><button onClick={()=>{setMode('UPDATE')}}>UPDATE</button></li>
-            <li><button onClick={()=>{deleteTopic({id})}}>DELETE</button></li>
+            <li><button onClick={()=>{
+                const deleted_topics = []
+                for(let i=0; i<topics.length; i++){
+                    if(topics[i].id !== id) {
+                        deleted_topics.push(topics[i]);
+                    }
+                }
+                setTopics(deleted_topics);
+                setMode('MAIN');
+            }}>DELETE</button></li>
         </>
     }else if (mode === 'CREATE') {
         content = <Create onCreate={createTopic}></Create>
