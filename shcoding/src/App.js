@@ -44,7 +44,9 @@ function App() {
     let deleteTopic = (_id)=>{
         const deleted_topics = []
         for(i=0; i<topics.length; i++){
-            
+            if(topics[i].id != _id) {
+                
+            }
         }
     }
 
