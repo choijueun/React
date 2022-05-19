@@ -47,7 +47,10 @@ function App() {
         content = <div>Hello, World.</div>
     }else if (mode === 'CONTENTS') {
         content = <Content id={id} topics={topics}></Content>
-        contenxtControl = <li><button onClick={()=>{setMode('UPDATE')}}>UPDATE</button></li>
+        contenxtControl = <>
+            <li><button onClick={()=>{setMode('UPDATE')}}>UPDATE</button></li>
+            <li><button onClick={()=>{deleteTopic({id})}}>DELETE</button></li>
+        </>
     }else if (mode === 'CREATE') {
         content = <Create onCreate={createTopic}></Create>
     }else if (mode === 'UPDATE') {
