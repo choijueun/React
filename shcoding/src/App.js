@@ -44,10 +44,11 @@ function App() {
     let deleteTopic = (_id)=>{
         const deleted_topics = []
         for(let i=0; i<topics.length; i++){
-            if(topics[i].id != _id) {
-                deleted_topics.push(i);
+            if(topics[i].id !== _id) {
+                deleted_topics.push(topics[i]);
             }
         }
+        setTopics(deleted_topics);
     }
 
     let content = null;
