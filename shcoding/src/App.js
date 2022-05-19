@@ -52,7 +52,7 @@ function App() {
             <li><button onClick={()=>{
                 const deleted_topics = []
                 for(let i=0; i<topics.length; i++){
-                    if(topics[i].id != id) {
+                    if(topics[i].id !== Number(id)) {
                         deleted_topics.push(topics[i]);
                     }
                 }
