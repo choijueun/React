@@ -41,6 +41,10 @@ function App() {
         setId(_id)
     }
 
+    let deleteTopic = (_id)=>{
+        const deleted_topics = []
+    }
+
     let content = null;
     let contenxtControl = null;
     if (mode === 'MAIN') {
