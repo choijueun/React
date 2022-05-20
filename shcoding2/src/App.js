@@ -21,6 +21,9 @@ class App extends Component {
         }
     }
     render () {
+        let _title, _desc = null;
+        
+
         return (
             <div className="App">
                 <Header title={this.state.subject}/>
