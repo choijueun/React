@@ -11,7 +11,12 @@ class App extends Component {
         super(props);
         this.state = {
             subject: "React Programming",
-            content: {title:'WEB', content: 'World Wide Web!'}
+            contents: [
+                {title:'WEB', content: 'World Wide Web!'},
+                {title:'HTML', content: 'HTML is ...'},
+                {title:'CSS', content: 'CSS is ...'},
+                {title:'JavaScript', content: 'JavaScript is ...'}
+            ]
         }
     }
     render () {
@@ -19,7 +24,7 @@ class App extends Component {
             <div className="App">
                 <Header title={this.state.subject}/>
                 <Nav/>
-                <Content title={this.state.content.title} content={this.state.content.content} />
+                <Content title={this.state.contents[0].title} content={this.state.contents[0].content} />
             </div>
         );
     }
