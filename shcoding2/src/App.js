@@ -23,7 +23,7 @@ class App extends Component {
         return (
             <div className="App">
                 <Header title={this.state.subject}/>
-                <Nav/>
+                <Nav data={this.state.contents}/>
                 <Content title={this.state.contents[0].title} content={this.state.contents[0].content} />
             </div>
         );
