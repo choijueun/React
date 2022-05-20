@@ -32,7 +32,7 @@ class App extends Component {
             <div className="App">
                 <Header title={this.state.subject}/>
                 <Nav data={this.state.contents}/>
-                <Content data={this.state.contents} />
+                <Content title={_title} desc={_desc} />
             </div>
         );
     }

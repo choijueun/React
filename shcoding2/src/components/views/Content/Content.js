@@ -3,13 +3,14 @@ import './Content.css'
 
 class Content extends Component {
     render() {
-        const contents = this.props.data;
+        const title = this.props.title;
+        const desc = this.props.desc;
 
 
         return (
             <article>
-                <h3>{contents[0].title}</h3>
-                {contents[0].content}
+                <h3>{title}</h3>
+                {desc}
             </article>
         )
     }
