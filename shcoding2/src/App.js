@@ -10,15 +10,16 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            subject: {title:'WEB', content: 'World Wide Web!'}
+            subject: "React Programming",
+            content: {title:'WEB', content: 'World Wide Web!'}
         }
     }
     render () {
         return (
             <div className="App">
-                <Header title="React Programming"/>
+                <Header title={this.state.subject}/>
                 <Nav/>
-                <Content title={this.state.subject.title} content={this.state.subject.content} />
+                <Content title={this.state.content.title} content={this.state.content.content} />
             </div>
         );
     }
