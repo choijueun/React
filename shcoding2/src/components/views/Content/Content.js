@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Content.css'
 
 class Content extends Component {
     render() {
@@ -6,10 +7,10 @@ class Content extends Component {
 
 
         return (
-            <>
-            <h3>{contents[0].title}</h3>
-            {contents[0].content}
-            </>
+            <article>
+                <h3>{contents[0].title}</h3>
+                {contents[0].content}
+            </article>
         )
     }
 }
