@@ -12,10 +12,10 @@ class App extends Component {
         this.state = {
             subject: "React Programming",
             contents: [
-                {title:'WEB', content: 'World Wide Web!'},
-                {title:'HTML', content: 'HTML is ...'},
-                {title:'CSS', content: 'CSS is ...'},
-                {title:'JavaScript', content: 'JavaScript is ...'}
+                {id: 1, title:'WEB', content: 'World Wide Web!'},
+                {id: 2, title:'HTML', content: 'HTML is ...'},
+                {id: 3, title:'CSS', content: 'CSS is ...'},
+                {id: 4, title:'JavaScript', content: 'JavaScript is ...'}
             ]
         }
     }
