@@ -2,10 +2,13 @@ import React, { Component } from 'react'
 
 class Content extends Component {
     render() {
+        const contents = this.props.data;
+
+
         return (
             <>
-            <h3>{this.props.title}</h3>
-            {this.props.content}
+            <h3>{contents[0].title}</h3>
+            {contents[0].content}
             </>
         )
     }
