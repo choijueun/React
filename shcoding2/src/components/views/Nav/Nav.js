@@ -3,11 +3,14 @@ import './Nav.css';
 
 class Nav extends Component {
     render(){
+
         const contents = this.props.data;
         let lis = [];
         for(let i=0; i<contents.length; i++){
             lis.push(<li key={ contents[i].id }>
-                <a href={"/content/" + contents[i].id }>{contents[i].title}</a>
+                <a href={"/content/" + contents[i].id } onClick={(e)=>{
+                    e.preventDefault();
+                }}>{contents[i].title}</a>
             </li>)
         }
 
