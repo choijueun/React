@@ -18,7 +18,7 @@ class App extends Component {
             <div className="App">
                 <Header title="React Programming"/>
                 <Nav/>
-                <Content title="Javascript" content="javascript is ..." />
+                <Content title={this.state.subject.title} content={this.state.subject.content} />
             </div>
         );
     }
