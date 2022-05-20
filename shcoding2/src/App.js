@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Header from './Component/views/Header/Header'
-import Nav from './Component/views/Nav/Nav'
+import Header from './components/views/Header/Header'
+import Nav from './components/views/Nav/Nav'
 
 class App extends Component {
     render () {
