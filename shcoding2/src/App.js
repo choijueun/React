@@ -12,6 +12,7 @@ class App extends Component {
         this.state = {
             subject: "React Programming",
             mode: 'MAIN',
+            main: {title: 'WELCOME', desc:'Hello, React!'},
             contents: [
                 {id: 1, title:'WEB', content: 'World Wide Web!'},
                 {id: 2, title:'HTML', content: 'HTML is ...'},
@@ -22,7 +23,10 @@ class App extends Component {
     }
     render () {
         let _title, _desc = null;
-        
+        if (this.state.mode === 'MAIN') {
+            _title = this.state.main.title;
+            _desc = this.state.main.desc;
+        }
 
         return (
             <div className="App">
