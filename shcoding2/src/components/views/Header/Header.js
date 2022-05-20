@@ -6,7 +6,7 @@ class Header extends Component {
         return (
             <header>
                 <h3>생활코딩!</h3>
-                <h1>{this.props.title}</h1>
+                <h1><a href="/">{this.props.title}</a></h1>
             </header>
         )
     }
