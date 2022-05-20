@@ -11,6 +11,7 @@ class App extends Component {
         super(props);
         this.state = {
             subject: "React Programming",
+            mode: 'MAIN',
             contents: [
                 {id: 1, title:'WEB', content: 'World Wide Web!'},
                 {id: 2, title:'HTML', content: 'HTML is ...'},
