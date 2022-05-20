@@ -26,6 +26,9 @@ class App extends Component {
         if (this.state.mode === 'MAIN') {
             _title = this.state.main.title;
             _desc = this.state.main.desc;
+        } else if (this.state.mode === 'READ') {
+            _title = this.state.contents[0].title;
+            _desc = this.state.contents[0].desc;
         }
 
         return (
