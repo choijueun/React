@@ -28,13 +28,17 @@ class App extends Component {
             _desc = this.state.main.desc;
         } else if (this.state.mode === 'READ') {
             _title = this.state.contents[0].title;
-            _desc = this.state.contents[0].desc;
+            _desc = this.state.contents[0].content;
         }
 
         return (
             <div className="App">
                 <Header title={this.state.subject}/>
                 <Nav data={this.state.contents}/>
+                <a href="/" onClick={function(e){
+                    e.preventDefault();
+                    this.setState({mode: 'READ'})
+                }.bind(this)}>TEST LINK</a>
                 <Content title={_title} desc={_desc} />
             </div>
         );
