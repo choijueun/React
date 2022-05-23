@@ -12,6 +12,7 @@ class App extends Component {
         this.state = {
             subject: "React Programming",
             mode: 'MAIN',
+            sel_content_id: 1,
             main: {title: 'WELCOME', desc:'Hello, React!'},
             contents: [
                 {id: 1, title:'WEB', content: 'World Wide Web!'},
@@ -27,18 +28,24 @@ class App extends Component {
             _title = this.state.main.title;
             _desc = this.state.main.desc;
         } else if (this.state.mode === 'READ') {
-            _title = this.state.contents[0].title;
-            _desc = this.state.contents[0].content;
+            const idx = this.state.sel_content_id - 1;
+            _title = this.state.contents[idx].title;
+            _desc = this.state.contents[idx].content;
         }
 
-        let chMode = function(_mode){
-            this.setState({mode: _mode});
-        }.bind(this)
+        const changeHelper = {
+            chMode : function(_mode){
+                this.setState({mode: _mode});
+            }.bind(this),
+            chCont : function(num) {
+                this.setState({sel_content_id: num});
+            }.bind(this)
+        }
 
         return (
             <div className="App">
-                <Header title={this.state.subject} onChangeMode={chMode}/>
-                <Nav data={this.state.contents} onChangeMode={chMode}/>
+                <Header title={this.state.subject} onChange={changeHelper}/>
+                <Nav data={this.state.contents} onChange={changeHelper}/>
                 <Content title={_title} desc={_desc} />
             </div>
         );
