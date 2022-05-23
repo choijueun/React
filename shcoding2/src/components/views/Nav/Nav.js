@@ -10,8 +10,8 @@ class Nav extends Component {
             lis.push(<li key={ contents[i].id }>
                 <a href={"/content/" + contents[i].id } onClick={(e)=>{
                     e.preventDefault();
-                    this.props.onChangeCont.chMode('READ');
-                    this.props.onChangeCont.chCont(contents[i].id);
+                    this.props.changeHelper.chMode('READ');
+                    this.props.changeHelper.chCont(contents[i].id);
                 }}>{contents[i].title}</a>
             </li>)
         }

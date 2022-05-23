@@ -44,8 +44,8 @@ class App extends Component {
 
         return (
             <div className="App">
-                <Header title={this.state.subject} onChangeCont={changeHelper}/>
-                <Nav data={this.state.contents} onChangeCont={changeHelper}/>
+                <Header title={this.state.subject} changeHelper={changeHelper}/>
+                <Nav data={this.state.contents} changeHelper={changeHelper}/>
                 <Content title={_title} desc={_desc} />
             </div>
         );
