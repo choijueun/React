@@ -35,10 +35,6 @@ class App extends Component {
             <div className="App">
                 <Header title={this.state.subject}/>
                 <Nav data={this.state.contents}/>
-                <a href="/" onClick={function(e){
-                    e.preventDefault();
-                    this.setState({mode: 'READ'})
-                }.bind(this)}>TEST LINK</a>
                 <Content title={_title} desc={_desc} />
             </div>
         );
