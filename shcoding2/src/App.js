@@ -31,10 +31,14 @@ class App extends Component {
             _desc = this.state.contents[0].content;
         }
 
+        let chMode = function(_mode){
+            this.setState({mode: _mode});
+        }.bind(this)
+
         return (
             <div className="App">
                 <Header title={this.state.subject}/>
-                <Nav data={this.state.contents}/>
+                <Nav data={this.state.contents} onChangeMode={chMode}/>
                 <Content title={_title} desc={_desc} />
             </div>
         );
