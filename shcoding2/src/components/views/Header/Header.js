@@ -8,6 +8,7 @@ class Header extends Component {
                 <h3>생활코딩!</h3>
                 <h1><a href="/" onClick={(e)=>{
                     e.preventDefault();
+                    this.props.onChangeMode('MAIN');
                 }}>{this.props.title}</a></h1>
             </header>
         )

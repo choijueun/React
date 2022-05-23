@@ -37,7 +37,7 @@ class App extends Component {
 
         return (
             <div className="App">
-                <Header title={this.state.subject}/>
+                <Header title={this.state.subject} onChangeMode={chMode}/>
                 <Nav data={this.state.contents} onChangeMode={chMode}/>
                 <Content title={_title} desc={_desc} />
             </div>
