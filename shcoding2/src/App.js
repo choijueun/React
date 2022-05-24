@@ -44,7 +44,7 @@ class App extends Component {
             <div className="App">
                 <Header title={this.state.subject} changeHelper={changeHelper}/>
                 <Nav data={this.state.contents} changeHelper={changeHelper}/>
-                <Content id={this.state.sel_content_id} contents={article} mode={this.state.mode} />
+                <Content id={this.state.sel_content_id} changeMode={changeHelper.chMode} contents={article} mode={this.state.mode} />
             </div>
         );
     }

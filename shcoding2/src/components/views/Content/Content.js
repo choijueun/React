@@ -6,12 +6,12 @@ class Content extends Component {
     render() {
         let title = this.props.contents.title;
         let desc = this.props.contents.desc;
-        
+
         return (
             <article>
                 <h3>{title}</h3>
                 {desc}
-                <Control mode={this.props.mode}/>
+                <Control mode={this.props.mode} changeMode={this.props.changeMode}/>
             </article>
         )
     }
