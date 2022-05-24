@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/views/Header/Header'
 import Nav from './components/views/Nav/Nav'
 import ReadContent from './components/views/Contents/ReadContent'
+import CreateContent from './components/views/Contents/CreateContent';
 
 class App extends Component {
     // 컴포넌트가 실행될 때 constructor가 가장 먼저 실행되어 초기화를 담당
@@ -23,14 +24,6 @@ class App extends Component {
         }
     }
     render () {
-        let article = null;
-        if (this.state.mode === 'MAIN') {
-            article = this.state.main;
-        } else if (this.state.mode === 'READ') {
-            const idx = this.state.sel_content_id - 1;
-            article = this.state.contents[idx];
-        }
-
         const changeHelper = {
             chMode : function(_mode){
                 this.setState({mode: _mode});
@@ -50,11 +43,24 @@ class App extends Component {
             }.bind(this)
         }
 
+        let article = null;
+        let content_section = null;
+        if (this.state.mode === 'MAIN') {
+            article = this.state.main;
+            content_section = <ReadContent id={this.state.sel_content_id} changeHelper={changeHelper} contents={article} mode={this.state.mode} />
+        }else if (this.state.mode === 'READ') {
+            const idx = this.state.sel_content_id - 1;
+            article = this.state.contents[idx];
+            content_section = <ReadContent id={this.state.sel_content_id} changeHelper={changeHelper} contents={article} mode={this.state.mode} />
+        }else if (this.state.mode === 'CREATE') {
+            content_section = <CreateContent/>
+        }
+
         return (
             <div className="App">
                 <Header title={this.state.subject} changeHelper={changeHelper}/>
                 <Nav data={this.state.contents} changeHelper={changeHelper}/>
-                <ReadContent id={this.state.sel_content_id} changeHelper={changeHelper} contents={article} mode={this.state.mode} />
+                {content_section}
             </div>
         );
     }
