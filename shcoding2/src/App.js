@@ -37,6 +37,16 @@ class App extends Component {
             }.bind(this),
             chCont : function(num) {
                 this.setState({sel_content_id: num});
+            }.bind(this),
+            delCont : function() {
+                let new_cont = [];
+                for(let i=0; i<this.state.contents.length; i++) {
+                    if(Number(this.state.contents[i].id) === this.state.sel_content_id) {
+                        continue;
+                    }
+                    new_cont.push(this.state.contents[i]);
+                }
+                this.setState({contents: new_cont});
             }.bind(this)
         }
 
@@ -44,7 +54,7 @@ class App extends Component {
             <div className="App">
                 <Header title={this.state.subject} changeHelper={changeHelper}/>
                 <Nav data={this.state.contents} changeHelper={changeHelper}/>
-                <Content id={this.state.sel_content_id} changeMode={changeHelper.chMode} contents={article} mode={this.state.mode} />
+                <Content id={this.state.sel_content_id} changeHelper={changeHelper} contents={article} mode={this.state.mode} />
             </div>
         );
     }

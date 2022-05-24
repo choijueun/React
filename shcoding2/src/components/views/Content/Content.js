@@ -11,7 +11,7 @@ class Content extends Component {
             <article>
                 <h3>{title}</h3>
                 {desc}
-                <Control mode={this.props.mode} changeMode={this.props.changeMode}/>
+                <Control mode={this.props.mode} changeHelper={this.props.changeHelper}/>
             </article>
         )
     }

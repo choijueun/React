@@ -2,23 +2,28 @@ import React from 'react'
 
 function Control(props) {
     let buttons = null;
-    let changeMode = props.changeMode;
+    let chMode = props.changeHelper.chMode;
+    let chCont = props.changeHelper.chCont;
+    let delCont = props.changeHelper.delCont;
 
     if(props.mode === 'MAIN') {
         buttons = <>
             <button onClick={()=>{
-                changeMode('CREATE');
+                chMode('CREATE');
             }}>CREATE</button>
         </>
     }else if (props.mode === 'READ') {
         buttons = <>
             <button onClick={()=>{
-                changeMode('CREATE');
+                chMode('CREATE');
             }}>CREATE</button>
             <button onClick={()=>{
-                changeMode('UPDATE');
+                chMode('UPDATE');
             }}>UPDATE</button>
-            <button>DELETE</button>
+            <button onClick={()=>{
+                delCont();
+                chMode('MAIN');
+            }}>DELETE</button>
         </>
     }
 
