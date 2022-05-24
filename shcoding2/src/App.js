@@ -31,6 +31,14 @@ class App extends Component {
             chCont : function(num) {
                 this.setState({sel_content_id: num});
             }.bind(this),
+            creCont : function(_title, _desc) {
+                let new_cont = [...this.state.contents];
+                let last_idx = this.state.contents.length - 1;
+                let new_id = new_cont[last_idx].id + 1;
+                new_cont.push({id: new_id, title: _title, desc: _desc});
+                this.setState({contents: new_cont});
+                changeHelper.chCont(new_id);
+            }.bind(this),
             delCont : function() {
                 let new_cont = [];
                 for(let i=0; i<this.state.contents.length; i++) {
@@ -53,7 +61,7 @@ class App extends Component {
             article = this.state.contents[idx];
             content_section = <ReadContent id={this.state.sel_content_id} changeHelper={changeHelper} contents={article} mode={this.state.mode} />
         }else if (this.state.mode === 'CREATE') {
-            content_section = <CreateContent/>
+            content_section = <CreateContent changeHelper={changeHelper}/>
         }
 
         return (
