@@ -3,7 +3,7 @@ import './App.css';
 
 import Header from './components/views/Header/Header'
 import Nav from './components/views/Nav/Nav'
-import CreateContent from './components/views/Contents/ReadContent'
+import ReadContent from './components/views/Contents/ReadContent'
 
 class App extends Component {
     // 컴포넌트가 실행될 때 constructor가 가장 먼저 실행되어 초기화를 담당
@@ -54,7 +54,7 @@ class App extends Component {
             <div className="App">
                 <Header title={this.state.subject} changeHelper={changeHelper}/>
                 <Nav data={this.state.contents} changeHelper={changeHelper}/>
-                <CreateContent id={this.state.sel_content_id} changeHelper={changeHelper} contents={article} mode={this.state.mode} />
+                <ReadContent id={this.state.sel_content_id} changeHelper={changeHelper} contents={article} mode={this.state.mode} />
             </div>
         );
     }
