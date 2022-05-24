@@ -15,22 +15,20 @@ class App extends Component {
             sel_content_id: 1,
             main: {title: 'WELCOME', desc:'Hello, React!'},
             contents: [
-                {id: 1, title:'WEB', content: 'World Wide Web!'},
-                {id: 2, title:'HTML', content: 'HTML is ...'},
-                {id: 3, title:'CSS', content: 'CSS is ...'},
-                {id: 4, title:'JavaScript', content: 'JavaScript is ...'}
+                {id: 1, title:'WEB', desc: 'World Wide Web!'},
+                {id: 2, title:'HTML', desc: 'HTML is ...'},
+                {id: 3, title:'CSS', desc: 'CSS is ...'},
+                {id: 4, title:'JavaScript', desc: 'JavaScript is ...'}
             ]
         }
     }
     render () {
-        let _title, _desc = null;
+        let article = null;
         if (this.state.mode === 'MAIN') {
-            _title = this.state.main.title;
-            _desc = this.state.main.desc;
+            article = this.state.main;
         } else if (this.state.mode === 'READ') {
             const idx = this.state.sel_content_id - 1;
-            _title = this.state.contents[idx].title;
-            _desc = this.state.contents[idx].content;
+            article = this.state.contents[idx];
         }
 
         const changeHelper = {
@@ -46,7 +44,9 @@ class App extends Component {
             <div className="App">
                 <Header title={this.state.subject} changeHelper={changeHelper}/>
                 <Nav data={this.state.contents} changeHelper={changeHelper}/>
-                <Content id={this.state.sel_content_id} contents={this.state.contents} mode={this.state.mode} />
+                <Content id={this.state.sel_content_id} 
+                        contents={article} 
+                        mode={this.state.mode} />
             </div>
         );
     }

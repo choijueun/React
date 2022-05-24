@@ -3,18 +3,15 @@ import './Content.css'
 
 class Content extends Component {
     render() {
-        const idx = this.props.id - 1;
-        let title, desc = null;
+        let title = this.props.contents.title;
+        let desc = this.props.contents.desc;
 
         let btn = null;
         if(this.props.mode === 'MAIN') {
-
             btn = <div>
                 <button>CREATE</button>
             </div>
         }else if(this.props.mode === 'READ'){
-            title = this.props.contents[idx].title;
-            desc = this.props.contents[idx].content;
             btn = <div>
                 <button>CREATE</button>
                 <button>UPDATE</button>
