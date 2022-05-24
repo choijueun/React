@@ -3,7 +3,7 @@ import './App.css';
 
 import Header from './components/views/Header/Header'
 import Nav from './components/views/Nav/Nav'
-import Content from './components/views/Content/Content'
+import Content from './components/views/Contents/ReadContent'
 
 class App extends Component {
     // 컴포넌트가 실행될 때 constructor가 가장 먼저 실행되어 초기화를 담당
