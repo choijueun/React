@@ -8,7 +8,13 @@ function CreateContent(props) {
     return (
         <article>
             <h2>CREATE</h2>
-            <form>
+            <form onSubmit={(e)=>{
+                e.preventDefault();
+                chMode('READ');
+                _title = e.target.title.value;
+                _desc = e.target.desc.value;
+                creCont(_title, _desc);
+            }}>
                 <div>
                     <input type='text' name="title" placeholder='TITLE'></input>
                 </div>
@@ -16,14 +22,7 @@ function CreateContent(props) {
                     <textarea name="desc" placeholder='CONTENT'></textarea>
                 </div>
                 <div className='submit'>
-                    <button onClick={(e)=>{
-                        e.preventDefault();
-                        console.log('CREATE');
-                        chMode('READ');
-                        _title = document.getElementsByName('title')[0].value;
-                        _desc = document.getElementsByName('desc')[0].value;
-                        creCont(_title, _desc);
-                    }}>SUBMIT</button>
+                    <button type='submit'>SUBMIT</button>
                 </div>
             </form>
         </article>
