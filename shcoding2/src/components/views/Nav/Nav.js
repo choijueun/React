@@ -2,8 +2,15 @@ import React, { Component } from 'react';
 import './Nav.css';
 
 class Nav extends Component {
-    render(){
+    shouldComponentUpdate(newProps, newState) {
+        if(this.props.data === newProps.data) {
+            return false;
+        }
+        return true
+    }
 
+    render(){
+        console.log('TOC RENDER')
         const contents = this.props.data;
         let lis = [];
         for(let i=0; i<contents.length; i++){
