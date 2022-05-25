@@ -5,6 +5,7 @@ import Header from './components/views/Header/Header'
 import Nav from './components/views/Nav/Nav'
 import ReadContent from './components/views/Contents/ReadContent'
 import CreateContent from './components/views/Contents/CreateContent';
+import UpdateContent from './components/views/Contents/UpdateContent';
 
 class App extends Component {
     // 컴포넌트가 실행될 때 constructor가 가장 먼저 실행되어 초기화를 담당
@@ -38,6 +39,17 @@ class App extends Component {
                 this.setState({contents: new_cont});
                 changeHelper.chCont(new_id);
             }.bind(this),
+            updCont: function(_title, _desc) {
+                let new_cont = [];
+                for(let i=0; i<this.state.contents.length; i++) {
+                    if(new_cont[i].id === this.state.sel_content_id) {
+                        new_cont.push({id: this.state.sel_content_id, title:_title, desc:_desc});
+                    }else {
+                        new_cont.push(new_cont[i]);
+                    }
+                }
+                this.setState({contents: new_cont});
+            }.bind(this),
             delCont : function() {
                 let new_cont = [];
                 for(let i=0; i<this.state.contents.length; i++) {
@@ -61,6 +73,10 @@ class App extends Component {
             content_section = <ReadContent id={this.state.sel_content_id} changeHelper={changeHelper} contents={article} mode={this.state.mode} />
         }else if (this.state.mode === 'CREATE') {
             content_section = <CreateContent changeHelper={changeHelper}/>
+        }else if (this.state.mode === 'UPDATE') {
+            const idx = this.state.sel_content_id - 1;
+            article = this.state.contents[idx];
+            content_section = <UpdateContent id={this.state.sel_content_id} changeHelper={changeHelper} contents={article}/>
         }
 
         return (
