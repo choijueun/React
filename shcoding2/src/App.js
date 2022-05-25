@@ -71,6 +71,7 @@ class App extends Component {
             for(let i=0; i<this.state.contents.length; i++) {
                 if(this.state.contents[i].id === this.state.sel_content_id) {
                     article = this.state.contents[i];
+                    break;
                 }
             }
             content_section = <ReadContent id={this.state.sel_content_id} changeHelper={changeHelper} contents={article} mode={this.state.mode} />
