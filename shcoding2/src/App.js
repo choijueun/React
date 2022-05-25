@@ -32,10 +32,9 @@ class App extends Component {
                 this.setState({sel_content_id: num});
             }.bind(this),
             creCont : function(_title, _desc) {
-                let new_cont = [...this.state.contents];
                 let last_idx = this.state.contents.length - 1;
-                let new_id = new_cont[last_idx].id + 1;
-                new_cont.push({id: new_id, title: _title, desc: _desc});
+                let new_id = this.state.contents[last_idx].id + 1;
+                let new_cont = this.state.contents.concat({id: new_id, title: _title, desc: _desc});
                 this.setState({contents: new_cont});
                 changeHelper.chCont(new_id);
             }.bind(this),
