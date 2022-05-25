@@ -42,10 +42,10 @@ class App extends Component {
             updCont: function(_title, _desc) {
                 let new_cont = [];
                 for(let i=0; i<this.state.contents.length; i++) {
-                    if(new_cont[i].id === this.state.sel_content_id) {
+                    if(this.state.contents[i].id === this.state.sel_content_id) {
                         new_cont.push({id: this.state.sel_content_id, title:_title, desc:_desc});
                     }else {
-                        new_cont.push(new_cont[i]);
+                        new_cont.push(this.state.contents[i]);
                     }
                 }
                 this.setState({contents: new_cont});
