@@ -68,8 +68,11 @@ class App extends Component {
             article = this.state.main;
             content_section = <ReadContent id={this.state.sel_content_id} changeHelper={changeHelper} contents={article} mode={this.state.mode} />
         }else if (this.state.mode === 'READ') {
-            const idx = this.state.sel_content_id - 1;
-            article = this.state.contents[idx];
+            for(let i=0; i<this.state.contents.length; i++) {
+                if(this.state.contents[i].id === this.state.sel_content_id) {
+                    article = this.state.contents[i];
+                }
+            }
             content_section = <ReadContent id={this.state.sel_content_id} changeHelper={changeHelper} contents={article} mode={this.state.mode} />
         }else if (this.state.mode === 'CREATE') {
             content_section = <CreateContent changeHelper={changeHelper}/>
