@@ -12,6 +12,9 @@ function FuncComp(props) {
             <input type='button' value="RANDOM" onClick={function(){
                     setNumber(Math.random());
                 }}></input>
+            <input type='button' value="DATE" onClick={function(){
+                    setDate((new Date()).toString());
+                }}></input>
         </div>
     );
 }
@@ -30,6 +33,9 @@ class ClassComp extends React.Component {
                 <p>Date: {this.state.date}</p>
                 <input type='button' value="RANDOM" onClick={function(){
                     this.setState({number: Math.random()});
+                }.bind(this)}></input>
+                <input type='button' value="DATE" onClick={function(){
+                    this.setState({date : (new Date()).toString()});
                 }.bind(this)}></input>
             </div>
         );
