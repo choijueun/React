@@ -6,7 +6,7 @@ function FuncComp(props) {
     return (
         <div className="container">
             <h2>Function Style Component</h2>
-            <p>props.intNumber: {number}</p>
+            <p>Number: {number}</p>
             <input type='button' value="RANDOM" onClick={function(){
                     setNumber(Math.random());
                 }}></input>
@@ -23,7 +23,7 @@ class ClassComp extends React.Component {
         return (
             <div className="container">
                 <h2>Class Style Component</h2>
-                <p>props.intNumber: {this.state.number}</p>
+                <p>Number: {this.state.number}</p>
                 <input type='button' value="RANDOM" onClick={function(){
                     this.setState({number: Math.random()});
                 }.bind(this)}></input>
