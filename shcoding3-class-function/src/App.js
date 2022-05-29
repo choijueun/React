@@ -13,13 +13,13 @@ function FuncComp(props) {
 
 class ClassComp extends React.Component {
     state = {
-        intNumber : this.props.intNumber
+        number : this.props.intNumber
     }
     render() {
         return (
             <div className="container">
                 <h2>Class Style Component</h2>
-                <p>props.intNumber: {this.state.intNumber}</p>
+                <p>props.intNumber: {this.state.number}</p>
             </div>
         );
     }
