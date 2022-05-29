@@ -1,11 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './App.css';
 
 function FuncComp(props) {
+    let [number, setNumber] = useState(props.intNumber);
     return (
         <div className="container">
             <h2>Function Style Component</h2>
-            <p>props.intNumber: {props.intNumber}</p>
+            <p>props.intNumber: {number}</p>
+            <input type='button' value="RANDOM" onClick={function(){
+                    setNumber(Math.random());
+                }}></input>
         </div>
     );
 }
