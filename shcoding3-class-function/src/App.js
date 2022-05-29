@@ -3,10 +3,12 @@ import './App.css';
 
 function FuncComp(props) {
     let [number, setNumber] = useState(props.intNumber);
+    let [date, setDate] = useState((new Date()).toString());
     return (
         <div className="container">
             <h2>Function Style Component</h2>
-            <p>Number: {number}</p>
+            <p>number: {number}</p>
+            <p>Date: {date}</p>
             <input type='button' value="RANDOM" onClick={function(){
                     setNumber(Math.random());
                 }}></input>
@@ -17,13 +19,15 @@ function FuncComp(props) {
 
 class ClassComp extends React.Component {
     state = {
-        number : this.props.intNumber
+        number : this.props.intNumber,
+        date : (new Date()).toString()
     }
     render() {
         return (
             <div className="container">
                 <h2>Class Style Component</h2>
-                <p>Number: {this.state.number}</p>
+                <p>number: {this.state.number}</p>
+                <p>Date: {this.state.date}</p>
                 <input type='button' value="RANDOM" onClick={function(){
                     this.setState({number: Math.random()});
                 }.bind(this)}></input>
