@@ -25,8 +25,8 @@ function App() {
     return (
     <div className="container">
         <h1>Hello World</h1>
-        <FuncComp/>
-        <ClassComp/>
+        <FuncComp intNumber={2}/>
+        <ClassComp intNumber={2}/>
     </div>
     );
 }
