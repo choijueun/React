@@ -1,10 +1,11 @@
 import React from 'react'
 import './App.css';
 
-function FuncComp() {
+function FuncComp(props) {
     return (
         <div className="container">
             <h2>Function Style Component</h2>
+            <p>props.intNumber: {props.intNumber}</p>
         </div>
     );
 }
@@ -15,6 +16,7 @@ class ClassComp extends React.Component {
         return (
             <div className="container">
                 <h2>Class Style Component</h2>
+                <p>props.intNumber: {this.props.intNumber}</p>
             </div>
         );
     }
