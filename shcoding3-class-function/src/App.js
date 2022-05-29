@@ -20,6 +20,9 @@ class ClassComp extends React.Component {
             <div className="container">
                 <h2>Class Style Component</h2>
                 <p>props.intNumber: {this.state.number}</p>
+                <input type='button' value="RANDOM" onClick={function(){
+                    this.setState({number: Math.random()});
+                }.bind(this)}></input>
             </div>
         );
     }
