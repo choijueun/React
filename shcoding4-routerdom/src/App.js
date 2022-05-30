@@ -1,4 +1,9 @@
 import './App.css';
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+} from 'react-router-dom'
 
 
 function Header() {
@@ -48,6 +53,13 @@ function App() {
     return <>
         <Header/>
         <TOC/>
+        <Router>
+            <Routes>
+                <Route path='/' element={<Main/>}></Route>
+                <Route path='/blog' element={<Blog/>}></Route>
+                <Route path='/guest' element={<Guest/>}></Route>
+            </Routes>
+        </Router>
     </>
 }
 
