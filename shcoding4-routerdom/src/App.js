@@ -3,7 +3,7 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
-    Link
+    NavLink
 } from 'react-router-dom'
 
 
@@ -17,9 +17,9 @@ function TOC() {
     return (
         <nav>
             <ul>
-                <li><Link to="/">HOME</Link></li>
-                <li><Link to="/blog">BLOG</Link></li>
-                <li><Link to="/guest">GUEST</Link></li>
+                <li><NavLink to="/">HOME</NavLink></li>
+                <li><NavLink to="/blog">BLOG</NavLink></li>
+                <li><NavLink to="/guest">GUEST</NavLink></li>
             </ul>
         </nav>
     )
