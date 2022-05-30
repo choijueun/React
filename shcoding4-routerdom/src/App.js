@@ -7,11 +7,24 @@ function Header() {
     )
 }
 
+function TOC() {
+    return (
+        <nav>
+            <ul>
+                <li>HOME</li>
+                <li>BLOG</li>
+                <li>GUEST</li>
+            </ul>
+        </nav>
+    )
+}
+
 
 function App() {
-    return (
+    return <>
         <Header/>
-    );
+        <TOC/>
+    </>
 }
 
 export default App;
