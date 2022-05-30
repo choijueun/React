@@ -3,8 +3,9 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
-    NavLink
 } from 'react-router-dom'
+
+import TOC from './components/views/TOC/TOC';
 
 
 function Header() {
@@ -13,17 +14,6 @@ function Header() {
     )
 }
 
-function TOC() {
-    return (
-        <nav>
-            <ul>
-                <li><NavLink to="/">HOME</NavLink></li>
-                <li><NavLink to="/blog">BLOG</NavLink></li>
-                <li><NavLink to="/guest">GUEST</NavLink></li>
-            </ul>
-        </nav>
-    )
-}
 
 function Main() {
     return (
