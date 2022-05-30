@@ -19,6 +19,14 @@ function TOC() {
     )
 }
 
+function Main() {
+    return (
+        <div>
+            <p>MAIN</p>
+        </div>
+    )
+}
+
 
 function App() {
     return <>
