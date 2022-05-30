@@ -6,13 +6,7 @@ import {
 } from 'react-router-dom'
 
 import TOC from './components/views/TOC/TOC';
-
-
-function Header() {
-    return (
-        <h1>React Router DOM</h1>
-    )
-}
+import Header from './components/views/Header/Header';
 
 
 function Main() {
