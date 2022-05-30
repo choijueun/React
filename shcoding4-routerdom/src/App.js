@@ -27,6 +27,14 @@ function Main() {
     )
 }
 
+function Blog() {
+    return (
+        <div>
+            <p>BLOG</p>
+        </div>
+    )
+}
+
 
 function App() {
     return <>
