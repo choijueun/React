@@ -35,6 +35,14 @@ function Blog() {
     )
 }
 
+function Guest() {
+    return (
+        <div>
+            <p>GUEST</p>
+        </div>
+    )
+}
+
 
 function App() {
     return <>
