@@ -16,9 +16,9 @@ function TOC() {
     return (
         <nav>
             <ul>
-                <li>HOME</li>
-                <li>BLOG</li>
-                <li>GUEST</li>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/blog">BLOG</a></li>
+                <li><a href="/guest">GUEST</a></li>
             </ul>
         </nav>
     )
