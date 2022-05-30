@@ -7,32 +7,9 @@ import {
 
 import TOC from './components/views/TOC/TOC';
 import Header from './components/views/Header/Header';
-
-
-function Main() {
-    return (
-        <div>
-            <p>MAIN</p>
-        </div>
-    )
-}
-
-function Blog() {
-    return (
-        <div>
-            <p>BLOG</p>
-        </div>
-    )
-}
-
-function Guest() {
-    return (
-        <div>
-            <p>GUEST</p>
-        </div>
-    )
-}
-
+import Main from './components/views/Main/Main';
+import Blog from './components/views/Blog/Blog';
+import Guest from './components/views/Guest/Guest';
 
 function App() {
     return <>
