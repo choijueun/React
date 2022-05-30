@@ -3,6 +3,7 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
+    Link
 } from 'react-router-dom'
 
 
@@ -16,9 +17,9 @@ function TOC() {
     return (
         <nav>
             <ul>
-                <li><a href="/">HOME</a></li>
-                <li><a href="/blog">BLOG</a></li>
-                <li><a href="/guest">GUEST</a></li>
+                <li><Link to="/">HOME</Link></li>
+                <li><Link to="/blog">BLOG</Link></li>
+                <li><Link to="/guest">GUEST</Link></li>
             </ul>
         </nav>
     )
@@ -52,8 +53,8 @@ function Guest() {
 function App() {
     return <>
         <Header/>
-        <TOC/>
         <Router>
+            <TOC/>
             <Routes>
                 <Route path='/' element={<Main/>}></Route>
                 <Route path='/blog' element={<Blog/>}></Route>
