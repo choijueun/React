@@ -58,6 +58,7 @@ function App() {
                 <Route path='/' element={<Main/>}></Route>
                 <Route path='/blog' element={<Blog/>}></Route>
                 <Route path='/guest' element={<Guest/>}></Route>
+                <Route path='*' element={<div>404 NOT FOUND</div>}></Route>
             </Routes>
         </Router>
     </>
