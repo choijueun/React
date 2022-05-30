@@ -2,7 +2,7 @@ import './App.css';
 import {
     BrowserRouter as Router,
     Routes,
-    Route,
+    Route
 } from 'react-router-dom'
 
 import TOC from './components/views/TOC/TOC';
@@ -18,7 +18,7 @@ function App() {
             <TOC/>
             <Routes>
                 <Route path='/' element={<Main/>}></Route>
-                <Route path='/blog' element={<Blog/>}></Route>
+                <Route path='/blog/*' element={<Blog/>}></Route>
                 <Route path='/guest' element={<Guest/>}></Route>
                 <Route path='*' element={<div>404 NOT FOUND</div>}></Route>
             </Routes>
