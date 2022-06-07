@@ -1,10 +1,10 @@
 import React from 'react'
-import {Routes, Route, NavLink, useParams} from 'react-router-dom'
+import {NavLink, useParams} from 'react-router-dom'
 
 
-function Topic() {
+function Topic(props) {
     return (
-        <div>Topic</div>
+        <div>TOPIC ID: {props.id}</div>
     )
 }
 
@@ -21,13 +21,8 @@ function Blog() {
             <li><NavLink to="/blog/2">blog2</NavLink></li>
         </ul>
 
-        <div>
-            TOPIC ID: {topic_id}
-        </div>
+        <Topic id={topic_id}/>
 
-        {/* <Routes>
-            <Route path='/blog/:blog_id' element={<Topic/>}></Route>
-        </Routes> */}
     </>
 }
 
