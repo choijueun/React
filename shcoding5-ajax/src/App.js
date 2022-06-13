@@ -20,7 +20,7 @@ function Nav() {
             })
     }, [])
 
-    // li 태그
+    // li 태그 배열
     const liTag = [];
     for(let i=0; i<listObj.length; i++) {
         let li = listObj[i]
