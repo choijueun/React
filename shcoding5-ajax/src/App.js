@@ -36,14 +36,23 @@ function Nav() {
     )
 }
 
+function Article(props) {
+    return (
+        <article>
+            <h2>{props.title}</h2>
+            {props.desc}
+        </article>
+    )
+}
+
 function App() {
+    const [content, setContent] = useState({'title': 'HELLO', 'desc': 'WORLD'});
+
     return (
         <div className="App">
             <h1>WEB</h1>
             <Nav/>
-            <article>
-
-            </article>
+            <Article title={content.title} desc={content.desc}/>
         </div>
     );
 }
