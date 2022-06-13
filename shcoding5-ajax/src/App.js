@@ -54,7 +54,8 @@ function App() {
     // set article contents state
     const [content, setContent] = useState({'title': 'HELLO', 'desc': 'WORLD'});
     // set Loading state
-    const [isLoading, setIsLoading] = useState(true);
+    const [isListLoading, setIsListLoading] = useState(true);
+    const [isContentLoading, setIsContentLoading] = useState(false);
 
     // useEffect의 두 번째 인수로 빈 함수
     // --> class 형식의 componentDidMount()처럼 한 번만 실행됨
@@ -68,30 +69,34 @@ function App() {
                 // result = 첫 번째 then 함수의 반환값
                 console.log(result);
                 setListObj(result);
-                setIsLoading(false);
+                setIsListLoading(false);
             })
     }, [])
 
     const changeContent = function(id) {
+        // now Loading
+        setIsContentLoading(true);
+        // fetchAPI
         fetch('content_'+id+'.json')
             .then(function(result) {
                 return result.json();
             }).then(function(result) {
                 console.log('content: ',result);
                 setContent(result);
+                setIsContentLoading(false);
             })
     }
 
     // 로딩&완료 Nav
     let NavTag = null;
-    if(isLoading) {
+    if(isListLoading) {
         NavTag = <NowLoading/>;
     }else {
         NavTag = <Nav listObj={listObj} onClick={changeContent}/>;
     }
     // 로딩&완료 Article
     let ArticleTag = null;
-    if(isLoading) {
+    if(isContentLoading) {
         ArticleTag = <NowLoading/>;
     }else {
         ArticleTag = <Article title={content.title} desc={content.desc}/>;
