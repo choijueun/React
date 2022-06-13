@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 
-function Nav() {
+function Nav(props) {
     // set list object state
     const [listObj, setListObj] = useState([])
 
@@ -24,7 +24,17 @@ function Nav() {
     const liTag = [];
     for(let i=0; i<listObj.length; i++) {
         let li = listObj[i]
-        liTag.push(<li key={li.id}><a href={li.id}>{li.title}</a></li>)
+        liTag.push(
+        <li key={li.id}>
+            <a href={li.id} data-id={li.id} onClick={e=>{
+                e.preventDefault();
+                console.log('trigger');
+                props.onClick(e.target.dataset.id);
+            }}>
+                {li.title}
+            </a>
+        </li>
+        )
     }
     
     return (
@@ -47,11 +57,20 @@ function Article(props) {
 
 function App() {
     const [content, setContent] = useState({'title': 'HELLO', 'desc': 'WORLD'});
+    const changeContent = function(id) {
+        fetch('content_'+id+'.json')
+            .then(function(result) {
+                return result.json();
+            }).then(function(result) {
+                console.log('content: ',result);
+                setContent(result);
+            })
+    }
 
     return (
         <div className="App">
             <h1>WEB</h1>
-            <Nav/>
+            <Nav onClick={changeContent}/>
             <Article title={content.title} desc={content.desc}/>
         </div>
     );
