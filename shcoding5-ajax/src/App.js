@@ -1,6 +1,16 @@
+import React, { useState } from 'react';
 import './App.css';
 
 function Nav() {
+    fetch('list.json')
+        .then(function(result){
+            // result = fetch된 파일의 내용
+            return result.json();
+        }).then(function(result){
+            // result = 첫 번째 then 함수의 반환값
+            console.log(result);
+        })
+    
     return (
         <nav>
             <ul>
