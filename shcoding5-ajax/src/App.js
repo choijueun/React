@@ -43,6 +43,11 @@ function Article(props) {
 function App() {
     // set list object state
     const [listObj, setListObj] = useState([]);
+    // set article contents state
+    const [content, setContent] = useState({'title': 'HELLO', 'desc': 'WORLD'});
+    // set Loading state
+    const [isLoading, setIsLoading] = useState(false);
+
     // useEffect의 두 번째 인수로 빈 함수
     // --> class 형식의 componentDidMount()처럼 한 번만 실행됨
     useEffect(()=>{
@@ -58,8 +63,6 @@ function App() {
             })
     }, [])
 
-    // set article contents state
-    const [content, setContent] = useState({'title': 'HELLO', 'desc': 'WORLD'});
     const changeContent = function(id) {
         fetch('content_'+id+'.json')
             .then(function(result) {
@@ -69,6 +72,7 @@ function App() {
                 setContent(result);
             })
     }
+    
 
     return (
         <div className="App">
