@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 
+function NowLoading() {
+    return (
+        <div>
+            Now Loading ...
+        </div>
+    )
+}
+
 function Nav(props) {
     // onClick
     const changePage = function(e){
@@ -46,7 +54,7 @@ function App() {
     // set article contents state
     const [content, setContent] = useState({'title': 'HELLO', 'desc': 'WORLD'});
     // set Loading state
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
     // useEffect의 두 번째 인수로 빈 함수
     // --> class 형식의 componentDidMount()처럼 한 번만 실행됨
@@ -60,6 +68,7 @@ function App() {
                 // result = 첫 번째 then 함수의 반환값
                 console.log(result);
                 setListObj(result);
+                setIsLoading(false);
             })
     }, [])
 
@@ -72,14 +81,29 @@ function App() {
                 setContent(result);
             })
     }
+
+    // 로딩&완료 Nav
+    let NavTag = null;
+    if(isLoading) {
+        NavTag = <NowLoading/>;
+    }else {
+        NavTag = <Nav listObj={listObj} onClick={changeContent}/>;
+    }
+    // 로딩&완료 Article
+    let ArticleTag = null;
+    if(isLoading) {
+        ArticleTag = <NowLoading/>;
+    }else {
+        ArticleTag = <Article title={content.title} desc={content.desc}/>;
+    }
     
 
     return (
         <div className="App">
             <h1>WEB</h1>
             {/* 보여주는 기능만 담당하는 presentational component */}
-            <Nav listObj={listObj} onClick={changeContent}/>
-            <Article title={content.title} desc={content.desc}/>
+            {NavTag}
+            {ArticleTag}
         </div>
     );
 }
