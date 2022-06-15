@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react';
+import store from '../store';
 
-function AddNumber(props) {
+function AddNumber() {
+    const [size, setSize] = useState(1);
+    const addNum = function(){
+        store.dispatch({type: 'INCREMENT', size: size})
+    }
     const onChangeSize = function(e) {
-        props.onChangeSize(e.target.value);
+        setSize(Number(e.target.value));
     }
 
     return (
         <div>
             <h1>Add Number</h1>
-            <input type="button" value="+" onClick={props.onChangeNum}></input>
-            <input type="text" defaultValue={props.size} onChange={onChangeSize}></input>
+            <input type="button" value="+" onClick={addNum}></input>
+            <input type="text" defaultValue={size} onChange={onChangeSize}></input>
         </div>
     )
 }
