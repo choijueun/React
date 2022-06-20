@@ -9,7 +9,7 @@ function App() {
         setNum(store.getState().number);
     })
     
-    const getStore = function(){
+    function getStore(){
         store.dispatch({type: 'App', number: num+1})
     }
 
