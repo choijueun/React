@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useState } from 'react';
 import './App.css';
 import store from './store';
@@ -12,6 +13,16 @@ function App() {
         store.dispatch({type: 'App', number: num+1})
     }
 
+    const [res, setRes] = useState(null);
+
+    function getAxios(){
+        const url = '/test-endpoint';
+        axios.get(url)
+             .then((response)=>{
+                 setRes(response.data);
+             })
+    }
+
     return (
         <div className="App">
             <div>
@@ -19,7 +30,8 @@ function App() {
                 <p>{num}</p>
             </div>
             <div>
-                <input type="button" value="AXIOS"></input>
+                <input type="button" value="AXIOS" onClick={getAxios}></input>
+                <p>{res}</p>
             </div>
         </div>
     );
