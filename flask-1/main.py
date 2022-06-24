@@ -7,7 +7,7 @@ async_mode = None
 app = Flask(__name__, static_folder='react-app/build') # Change your react-app name 'my-react-app'
 app.config['SECRET_KEY'] = 'secret!'
 thread_lock = Lock()
-# CORS(app)
+CORS(app)
 
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
