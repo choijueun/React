@@ -12,6 +12,6 @@ export default function() {
     }
 
     return (
-        <AddNumber size={size} clickBtn={addNum} onChangeSize={onChangeSize}/>
+        <AddNumber size={size} onClick={addNum} onChangeSize={onChangeSize}/>
     )
 }
