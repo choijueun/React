@@ -7,8 +7,8 @@ export default function() {
     store.subscribe(function(){
         setNum(store.getState().num);
     })
-    
+
     return (
-        <DisplayNumber num={num}/>
+        <DisplayNumber num={num} unit={"kg"}/>
     )
 }
