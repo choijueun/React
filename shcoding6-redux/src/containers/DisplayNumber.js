@@ -3,7 +3,7 @@ import DisplayNumber from "../components/DisplayNumber";
 
 function mapReduxStateToReactProps(state) {
     return {
-        number: state.number
+        num: state.num
     }
 }
 
