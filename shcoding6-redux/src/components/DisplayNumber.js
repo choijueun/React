@@ -1,15 +1,9 @@
-import React, { useState } from 'react'
-import store from '../store';
+function DisplayNumber(props) {
 
-function DisplayNumber() {
-    const [num, setNum] = useState(store.getState().num);
-    store.subscribe(function(){
-        setNum(store.getState().num);
-    })
     return (
         <div>
             <h1>Display Number</h1>
-            <input type="text" value={num} readOnly></input>
+            <input type="text" value={props.num} readOnly></input>
         </div>
     )
 }

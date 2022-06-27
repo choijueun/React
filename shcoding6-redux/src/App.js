@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import DisplayNumber from './components/DisplayNumber';
+import DisplayNumber from './containers/DisplayNumber';
 import AddNumber from './containers/AddNumber';
 
 
