@@ -1,5 +1,6 @@
 import { createStore } from "redux";
-export default createStore(function(state, action) {
+
+function store(state, action) {
     if(state === undefined) {
         return {num: 0}
     }
@@ -7,4 +8,6 @@ export default createStore(function(state, action) {
         return { ...state, num:state.num + action.size }
     }
     return state;
-}, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+}
+
+export default createStore(store, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
