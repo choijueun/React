@@ -9,6 +9,6 @@ export default function() {
     })
 
     return (
-        <DisplayNumber num={num} unit={"kg"}/>
+        <DisplayNumber num={num} unit="kg"/>
     )
 }
