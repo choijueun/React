@@ -8,7 +8,7 @@ function App() {
     return (
         <div className="App">
             <AddNumber/>
-            <DisplayNumber/>
+            <DisplayNumber unit="kg"/>
         </div>
     );
 }
