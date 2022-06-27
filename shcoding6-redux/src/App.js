@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
-import AddNumberRoot from './components/AddNumberRoot';
-import DisplayNumberRoot from './components/DisplayNumberRoot';
+import DisplayNumber from './components/DisplayNumber';
+import AddNumber from './containers/AddNumber';
 
 
 function App() {
     return (
         <div className="App">
-            <AddNumberRoot/>
-            <DisplayNumberRoot/>
+            <AddNumber/>
+            <DisplayNumber/>
         </div>
     );
 }
