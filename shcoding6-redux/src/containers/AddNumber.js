@@ -1,3 +1,8 @@
+import { connect } from "react-redux";
+import AddNumber from "../components/AddNumber";
+export default connect()(AddNumber)
+
+/*
 import React, {useState} from 'react';
 import AddNumber from '../components/AddNumber';
 import store from '../store';
@@ -15,3 +20,4 @@ export default function() {
         <AddNumber size={size} onClick={addNum} onChangeSize={onChangeSize}/>
     )
 }
+*/
