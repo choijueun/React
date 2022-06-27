@@ -1,6 +1,20 @@
 import { connect } from "react-redux";
 import DisplayNumber from "../components/DisplayNumber";
-export default connect()(DisplayNumber)
+
+function mapReduxStateToReactProps(state) {
+    return {
+        number: state.number
+    }
+}
+
+function mapReduxDispatchToReactProps(){
+    return {}
+}
+
+export default connect(
+    mapReduxStateToReactProps,
+    mapReduxDispatchToReactProps
+)(DisplayNumber)
 
 // props를 자동으로 하위 컴포넌트에 전달
 
