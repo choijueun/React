@@ -19,7 +19,7 @@ function App() {
             <input type="button" value="PRINT" onClick={printNumber}></input>
         </div>
         <hr></hr>
-        <LifeCycle/>
+        <LifeCycle props_value={number}/>
     </div>
     );
 }
