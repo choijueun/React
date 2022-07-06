@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import LifeCycle from './part1/R006';
+import ES6String from './part1/R009';
 
 function App() {
     const [number, setNumber] = useState(0);
@@ -19,7 +19,7 @@ function App() {
             <input type="button" value="PRINT" onClick={printNumber}></input>
         </div>
         <hr></hr>
-        <LifeCycle props_value={number}/>
+        <ES6String>
     </div>
     );
 }
