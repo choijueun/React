@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import ClassPrototype from './part1/R012';
+import ForEach from './part1/R014';
 
 function App() {
     const [number, setNumber] = useState(0);
@@ -19,7 +19,7 @@ function App() {
             <input type="button" value="PRINT" onClick={printNumber}></input>
         </div>
         <hr></hr>
-        <ClassPrototype/>
+        <ForEach/>
     </div>
     );
 }
