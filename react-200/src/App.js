@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import ES6String from './part1/R009';
+import SpreadOperator from './part1/R011';
 
 function App() {
     const [number, setNumber] = useState(0);
@@ -19,7 +19,7 @@ function App() {
             <input type="button" value="PRINT" onClick={printNumber}></input>
         </div>
         <hr></hr>
-        <ES6String/>
+        <SpreadOperator/>
     </div>
     );
 }
