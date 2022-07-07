@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
-import Map from './part1/R015';
+import CDUclass from './CDUclass';
+import CDUfunction from './CDUfunction';
 
 function App() {
     const [number, setNumber] = useState(0);
@@ -10,17 +11,27 @@ function App() {
     function printNumber(){
         console.log(number);
     }
+
+    const [age, setAge] = useState(null);
+    let content = null;
+    if(!age) {
+        content = <>
+            <CDUfunction age={age} onChangeAge={setAge}/>
+            <CDUclass age={age} onChangeAge={setAge}/>
+        </>
+    }
+
     
     return (
-    <div className="App">
-        <h1>REACT 200</h1>
-        <div>
-            <input type="text" value={number} onChange={changeNumber}></input>
-            <input type="button" value="PRINT" onClick={printNumber}></input>
+        <div className="App">
+            <h1>REACT 200</h1>
+            <div>
+                <input type="text" value={number} onChange={changeNumber}></input>
+                <input type="button" value="PRINT" onClick={printNumber}></input>
+            </div>
+            <hr></hr>
+            {content}
         </div>
-        <hr></hr>
-        <Map/>
-    </div>
     );
 }
 
