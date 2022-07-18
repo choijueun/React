@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import CDUclass from './CDUclass';
 import CDUfunction from './CDUfunction';
+import R015 from './part1/R015'
 
 function App() {
     const [number, setNumber] = useState(0);
@@ -13,9 +14,9 @@ function App() {
     }
 
     const [age, setAge] = useState(null);
-    let content = null;
-    if(!age) {
-        content = <>
+    let class_function_lifecycle = null;
+    if(age) {
+        class_function_lifecycle = <>
             <CDUfunction age={age} onChangeAge={setAge}/>
             <CDUclass age={age} onChangeAge={setAge}/>
         </>
@@ -30,7 +31,8 @@ function App() {
                 <input type="button" value="PRINT" onClick={printNumber}></input>
             </div>
             <hr></hr>
-            {content}
+            {class_function_lifecycle}
+            <R015/>
         </div>
     );
 }
