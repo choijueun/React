@@ -9,28 +9,18 @@ function Sample() {
         console.log(svgRef.current)
         const svg = select(svgRef.current); // selection 객체
 
-        svg
-            // circle tag 전부 찾기
-            .selectAll("circle")
-            // data binding
-            .data(data)
+        svg.selectAll("circle")    // circle tag 전부 찾기
+            .data(data)             // data binding
             // create update delete 관리
-            // .join('circle) //간단
-            .join(
-                // circle 없다면 생성
-                (enter) => enter.append("circle"),
-                // circle 있다면 업데이트(updated class 추가)
-                (update) => update.attr("class", "updated"),
-                // 남는 circle 지우기 (?)
-                (exit) => exit.remove()
+            .join(      // .join('circle) //간단
+                (enter) => enter.append("circle"),           // circle 없다면 생성
+                (update) => update.attr("class", "updated"), // circle 있다면 업데이트(updated class 추가)
+                (exit) => exit.remove()                      // 남는 circle 지우기 (?)
             )
             // [속성] 
-            // r    반지름 
-            .attr("r", (value) => value)
-            // cx   중심점 x좌표 
-            .attr("cx", (value) => value * 2)
-            // cy   중심점 y좌표
-            .attr("cy", (value) => value * 2)
+            .attr("r", (value) => value)        // r    반지름 
+            .attr("cx", (value) => value * 2)   // cx   중심점 x좌표 
+            .attr("cy", (value) => value * 2)   // cy   중심점 y좌표
             .attr("stroke", "blue");
     }, [data]);
 
