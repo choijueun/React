@@ -36,9 +36,16 @@ function Sample() {
 
     return (
     <>
-      <svg ref={svgRef}></svg>
-      <button onClick={() => {setData(data.map(value => value + 5))}}>increase + 5</button>
-      <button onClick={() => {setData(data.filter(value => value > 35))}}>filter circle r should gt 35</button>
+        <h1>Sample.js</h1>
+        <div>
+            <a href="https://velog.io/@bangina/D3.js-React.js-Hooks-함께-사용하기-1" target={"_blank"}>
+                <button>D3.js + React.js (Hooks) 함께 사용하기 -1</button>
+            </a>
+        </div>
+        <hr />
+        <svg ref={svgRef}></svg>
+        <button onClick={() => {setData(data.map(value => value + 5))}}>increase + 5</button>
+        <button onClick={() => {setData(data.filter(value => value > 35))}}>filter circle r should gt 35</button>
     </>
     );
 }
