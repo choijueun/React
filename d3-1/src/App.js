@@ -3,11 +3,12 @@ import './App.css';
 
 import Sample from './components/Sample';
 import CurvedLine from './components/CurvedLine';
+import AxisCurvedLine from './components/AxisCurvedLine';
 
 
 function Nav(props){
-    const nav     = ['Sample(Circle)', 'CurvedLine']
-    const content = [<Sample/>, <CurvedLine/>]
+    const nav     = ['Sample(Circle)', 'CurvedLine', 'CurvedLine with axis']
+    const content = [<Sample/>, <CurvedLine/>, <AxisCurvedLine/>]
 
     let li = []
     nav.forEach((n, i)=>{
