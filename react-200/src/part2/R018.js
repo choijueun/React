@@ -7,7 +7,7 @@ function PropComponent(props){
     return <div>
         <p>String: {String}</p>
         <p>Number: {Number}</p>
-        <p>Boolean: {Boolean.toString()}</p>
+        <p>Boolean: {Boolean.toString()} (Default: true)</p>
         <p>Array: {Array.toString()}</p>
         <p>Obj: {JSON.stringify(Obj)}</p>
         <p>Function: {Function}</p>
@@ -29,7 +29,7 @@ function R018() {
         <PropComponent
             String="string props"
             Number={200}
-            Boolean={true}
+            Boolean
             Array={[1,2,3]}
             Obj={{'name': 'react', 'No': 18}}
             Function={ console.log('hi') } 
