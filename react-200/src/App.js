@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import CDUclass from './CDUclass';
 import CDUfunction from './CDUfunction';
 
-import ReactstrapBreadcrumbs from './part2/R036';
+import ReactstrapDropdown from './part2/R037';
 
 function App() {
     const [number, setNumber] = useState(0);
@@ -35,7 +35,7 @@ function App() {
             </div>
             <hr></hr>
             {class_function_lifecycle}
-            <ReactstrapBreadcrumbs />
+            <ReactstrapDropdown />
         </div>
     );
 }
