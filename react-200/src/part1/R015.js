@@ -12,11 +12,13 @@ function Map() {
     const objArr = [{key: 'react', value: 200},
                     {key: '리액트', value: 'Two Hunderds'}]
 
-    objArr.map((obj, index)=>{
+    const objArr2 = objArr.map((obj, index)=>{
         console.log(obj)
         console.log(obj.key, obj.value)
         console.log(index)
+        return {value: obj.value, idx: index}
     })
+    console.log(objArr2)
 
     return (
         <div>Map</div>
