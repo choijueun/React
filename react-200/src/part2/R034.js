@@ -1,7 +1,7 @@
 import React from 'react'
 import { Alert, UncontrolledAlert } from 'reactstrap'
 
-function Reactstrap() {
+function ReactstrapAlerts() {
     return <React.Fragment>
         <h2>reactstrap</h2>
         <Alert color='primary'>
@@ -24,4 +24,4 @@ function Reactstrap() {
     </React.Fragment>
 }
 
-export default Reactstrap
+export default ReactstrapAlerts
