@@ -24,14 +24,17 @@ PropComponent.propTypes = {
 
 function R018() {
   return (
-    <PropComponent
-        String="string props"
-        Number={200}
-        Boolean={true}
-        Array={[1,2,3]}
-        Obj={{'name': 'react', 'No': 18}}
-        Function={ console.log('hi') } 
-    />
+      <>
+        <h2>R018 Props datatype</h2>
+        <PropComponent
+            String="string props"
+            Number={200}
+            Boolean={true}
+            Array={[1,2,3]}
+            Obj={{'name': 'react', 'No': 18}}
+            Function={ console.log('hi') } 
+        />
+      </>
   )
 }
 
