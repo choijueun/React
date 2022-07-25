@@ -20,7 +20,7 @@ function ReactstrapDropdown() {
                 <DropdownItem default>default</DropdownItem>
                 <DropdownItem disabled>disabled</DropdownItem>
                 <DropdownItem header>header2</DropdownItem>
-                <a href="https://www.naver.com/" target="_blank">
+                <a href="https://www.naver.com/" target="_blank" rel="noreferrer">
                     <DropdownItem>LINK</DropdownItem>
                 </a>
                 <DropdownItem onClick={e=>{alert('Alert Button')}}>ALERT</DropdownItem>
