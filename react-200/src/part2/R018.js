@@ -31,7 +31,7 @@ PropComponent.defaultProps = {
 function R018() {
   return (
       <>
-        <h2>R018 Props datatype</h2>
+        <h2>R018~R022 Props datatype</h2>
         <code>
             [R018] import PropTypes from 'prop-types' <br/>
             [R019] Boolean: default value = true<br/>
