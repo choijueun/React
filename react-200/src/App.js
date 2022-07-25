@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import CDUclass from './CDUclass';
 import CDUfunction from './CDUfunction';
 
-import ReactstrapCarousel from './part2/reactstrap/R041';
+import ReactstrapCollapse from './part2/reactstrap/R042';
 
 function App() {
     const [number, setNumber] = useState(0);
@@ -35,7 +35,7 @@ function App() {
             </div>
             <hr></hr>
             {class_function_lifecycle}
-            <ReactstrapCarousel />
+            <ReactstrapCollapse />
         </div>
     );
 }
