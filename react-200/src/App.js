@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css'
+
 import CDUclass from './CDUclass';
 import CDUfunction from './CDUfunction';
-import R028 from './part2/R028';
+
+import Reactstrap from './part2/R034';
 
 function App() {
     const [number, setNumber] = useState(0);
@@ -32,7 +35,7 @@ function App() {
             </div>
             <hr></hr>
             {class_function_lifecycle}
-            <R028/>
+            <Reactstrap />
         </div>
     );
 }
