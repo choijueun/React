@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import CDUclass from './CDUclass';
 import CDUfunction from './CDUfunction';
-import R018 from './part2/R018';
+import R023 from './part2/R023';
 
 function App() {
     const [number, setNumber] = useState(0);
@@ -32,7 +32,7 @@ function App() {
             </div>
             <hr></hr>
             {class_function_lifecycle}
-            <R018/>
+            <R023/>
         </div>
     );
 }
