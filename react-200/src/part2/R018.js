@@ -18,7 +18,10 @@ PropComponent.propTypes = {
     Number: PropTypes.number,
     Boolean: PropTypes.bool,
     Array: PropTypes.array,
-    Obj: PropTypes.object,
+    Obj: PropTypes.shape({
+        name: PropTypes.string,
+        No: PropTypes.number
+    }),
     Function: PropTypes.func
 }
 
