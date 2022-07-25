@@ -29,6 +29,12 @@ function R018() {
   return (
       <>
         <h2>R018 Props datatype</h2>
+        <code>
+            [R018] import PropTypes from 'prop-types' <br/>
+            [R019] Boolean: default value = true<br/>
+            [R020] 객체 내부 datatype: shape()<br/>
+            [R021] 필수 값: .isRequired
+        </code>
         <PropComponent
             String="string props"
             Number={200}
