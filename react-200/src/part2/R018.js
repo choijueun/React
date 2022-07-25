@@ -14,7 +14,7 @@ function PropComponent(props){
     </div>
 }
 PropComponent.propTypes = {
-    String: PropTypes.string,
+    String: PropTypes.string.isRequired,
     Number: PropTypes.number,
     Boolean: PropTypes.bool,
     Array: PropTypes.array,
