@@ -24,6 +24,9 @@ PropComponent.propTypes = {
     }),
     Function: PropTypes.func
 }
+PropComponent.defaultProps = {
+    Number: 50
+}
 
 function R018() {
   return (
@@ -33,11 +36,12 @@ function R018() {
             [R018] import PropTypes from 'prop-types' <br/>
             [R019] Boolean: default value = true<br/>
             [R020] 객체 내부 datatype: shape()<br/>
-            [R021] 필수 값: .isRequired
+            [R021] 필수 값: .isRequired<br/>
+            [R022] props key&val 모두 없을 때 default: defaultProps
         </code>
         <PropComponent
             String="string props"
-            Number={200}
+            // Number={200}
             Boolean
             Array={[1,2,3]}
             Obj={{'name': 'react', 'No': 18}}
