@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import CDUclass from './CDUclass';
 import CDUfunction from './CDUfunction';
 
-import ReactstrapCard from './part2/reactstrap/R040';
+import ReactstrapCarousel from './part2/reactstrap/R041';
 
 function App() {
     const [number, setNumber] = useState(0);
@@ -35,7 +35,7 @@ function App() {
             </div>
             <hr></hr>
             {class_function_lifecycle}
-            <ReactstrapCard />
+            <ReactstrapCarousel />
         </div>
     );
 }
