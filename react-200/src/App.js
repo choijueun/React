@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import CDUclass from './CDUclass';
 import CDUfunction from './CDUfunction';
 
-import ReactstrapDropdown from './part2/R037';
+import ReactstrapButtonGroup from './part2/R038';
 
 function App() {
     const [number, setNumber] = useState(0);
@@ -35,7 +35,7 @@ function App() {
             </div>
             <hr></hr>
             {class_function_lifecycle}
-            <ReactstrapDropdown />
+            <ReactstrapButtonGroup />
         </div>
     );
 }
