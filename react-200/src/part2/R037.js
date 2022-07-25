@@ -17,7 +17,9 @@ function ReactstrapDropdown() {
             <DropdownToggle caret>버튼 드롭다운</DropdownToggle>
             <DropdownMenu>
                 <DropdownItem header>header</DropdownItem>
+                <DropdownItem default>default</DropdownItem>
                 <DropdownItem disabled>disabled</DropdownItem>
+                <DropdownItem header>header2</DropdownItem>
                 <a href="https://www.naver.com/" target="_blank">
                     <DropdownItem>LINK</DropdownItem>
                 </a>
