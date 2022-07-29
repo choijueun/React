@@ -4,6 +4,7 @@ import { Input, InputGroup, InputGroupText } from 'reactstrap'
 function ReactstrapInputGroup() {
     return (
     <div>
+        <h2>reactstrap: InputGroup</h2>
         <InputGroup>
             <Input type='text' id="id" placeholder='USER ID'/>
             <InputGroupText>@ foryousystems.com</InputGroupText>
