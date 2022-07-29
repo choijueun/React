@@ -13,7 +13,8 @@ function ReactstrapFade() {
         <Button color='success' onClick={toggle}>
             Fade In/Out
         </Button>
-        <Fade in={isShow}>
+        <Fade in={isShow} tag="p">
+            {/* default tag: div */}
             <Cat/>
         </Fade>
     </div>
