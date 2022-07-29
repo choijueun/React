@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Badge, Button } from 'reactstrap'
 
 function LifeCycleFunction(props) {
     console.log('1. outside function')
@@ -23,10 +24,12 @@ function LifeCycleFunction(props) {
     }
 
     return (
-        <>
-            <h2>F - age: {props.age}</h2>
-            <input type="button" value="setAge" onClick={setAge}></input>
-        </>
+        <div style={{margin:15}}>
+            <h2></h2>
+            <p>
+                Functional - age: {props.age} <Badge size="sm" onClick={setAge} pill>setAge</Badge>
+            </p>
+        </div>
     )
 }
 
