@@ -10,7 +10,7 @@ function ReactstrapButtonGroup() {
     }
 
     return <div style={{padding:10}}>
-        <h2>ReactstrapButtonGroup</h2>
+        <h2>reactstrap: ButtonGroup</h2>
         <ButtonGroup>
             <Button outline onClick={updownNum}>-1</Button>
             <Button outline onClick={updownNum}>0</Button>

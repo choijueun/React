@@ -31,7 +31,7 @@ function ReactstrapCarousel() {
 
   return (
     <div style={{width:600}}>
-        <h2>ReactstrapCarousel</h2>
+        <h2>reactstrap: Carousel</h2>
         <UncontrolledCarousel items={items} />
     </div>
   )

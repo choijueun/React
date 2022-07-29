@@ -3,7 +3,7 @@ import { Breadcrumb, BreadcrumbItem } from 'reactstrap'
 
 function ReactstrapBreadcrumbs() {
     return <>
-        <h2>reactstrap Breadcrumbs</h2>
+        <h2>reactstrap: Breadcrumbs</h2>
         <div id="top">
             <Breadcrumb tag="nav" listTag="div">
                 <BreadcrumbItem tag="a" href="#top">GO TO TOP</BreadcrumbItem>

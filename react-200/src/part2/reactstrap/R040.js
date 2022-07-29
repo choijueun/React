@@ -7,7 +7,7 @@ import {
 function ReactstrapCard() {
     return (
     <div style={{width: 500}}>
-        <h2>ReactstrapCard</h2>
+        <h2>reactstrap: Card</h2>
         <Card>
             <CardImg top src="https://cdn2.thecatapi.com/images/MTY1MjExMA.jpg" alt='cat raising up its arms'/>
             <CardBody>

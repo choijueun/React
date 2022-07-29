@@ -10,6 +10,7 @@ function ReactstrapFade() {
 
     return (
     <div>
+        <h2>reactstrap: Fade</h2>
         <Button color='success' onClick={toggle}>
             Fade In/Out
         </Button>

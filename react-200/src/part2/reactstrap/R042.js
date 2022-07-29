@@ -15,7 +15,7 @@ function ReactstrapCollapse() {
 
     return (
     <div>
-        <h2>ReactstrapCollapse</h2>
+        <h2>reactstrap: Collapse</h2>
         <Button color="warning" id="toggleBtn" onClick={toggle}>{btnName}</Button>
         <UncontrolledCollapse toggler='#toggleBtn'>
             <Card style={{width:500}}>

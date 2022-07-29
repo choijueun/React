@@ -12,7 +12,7 @@ function ReactstrapDropdown() {
 
     return (
     <div>
-        <h2>ReactstrapDropdown</h2>
+        <h2>reactstrap: Dropdown</h2>
         <ButtonDropdown isOpen={isDropdownOpen} toggle={toggle}>
             <DropdownToggle caret>버튼 드롭다운</DropdownToggle>
             <DropdownMenu>

@@ -3,7 +3,7 @@ import { Button } from 'reactstrap'
 
 function ReactstrapButtons() {
     return (<div>
-        <h2>ReactstrapButtons</h2>
+        <h2>reactstrap: Button</h2>
         <div style={{padding:10}}>
             <Button color='primary'>primary</Button>
             <Button color='secondary'>secondary</Button>

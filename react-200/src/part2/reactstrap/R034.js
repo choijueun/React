@@ -3,7 +3,7 @@ import { Alert, UncontrolledAlert } from 'reactstrap'
 
 function ReactstrapAlerts() {
     return <React.Fragment>
-        <h2>reactstrap</h2>
+        <h2>reactstrap: Alert</h2>
         <Alert color='primary'>
             Simple Alert [color : primary]
         </Alert>

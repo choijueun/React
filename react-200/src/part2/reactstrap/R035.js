@@ -3,7 +3,7 @@ import { Badge, Button } from 'reactstrap'
 
 function ReactstrapBadges() {
     return <div style={{margin: 10}}>
-        <h2>reactstrap badge</h2>
+        <h2>reactstrap: badge</h2>
         <p>
             PRODUCT <Badge color='danger'>50%</Badge> 
         </p>
