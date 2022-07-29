@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css'
 
-import CDUclass from './CDUclass';
+import LifeCycleClass from './LifeCycleClass';
 import LifeCycleFunction from './LifeCycleFunction';
 
 import ReactstrapForm from './part2/reactstrap/R044';

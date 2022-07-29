@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class CDUclass extends Component {
+class LifeCycleClass extends Component {
     componentDidMount(){
         console.log('Class: componentDidMount()');
     }
@@ -26,4 +26,4 @@ class CDUclass extends Component {
     }
 }
 
-export default CDUclass
+export default LifeCycleClass
