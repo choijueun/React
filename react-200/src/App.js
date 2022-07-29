@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import LifeCycleClass from './LifeCycleClass';
 import LifeCycleFunction from './LifeCycleFunction';
 
-import ReactstrapJumbotron from './part2/reactstrap/R046';
+import ReactstrapListGroup from './part2/reactstrap/R047';
 
 function App() {
     const [age, setAge] = useState(0);
@@ -27,7 +27,7 @@ function App() {
             <hr></hr>
             <LifeCycleFunction age={age} onChangeAge={setAge}/>
             <hr/>
-            <ReactstrapJumbotron />
+            <ReactstrapListGroup />
         </div>
     );
 }
