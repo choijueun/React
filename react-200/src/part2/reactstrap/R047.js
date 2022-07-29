@@ -1,5 +1,5 @@
 import React from 'react'
-import { Badge, ListGroup, ListGroupItem } from 'reactstrap'
+import { Badge, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText } from 'reactstrap'
 
 function ReactstrapListGroup() {
   return (
@@ -20,6 +20,17 @@ function ReactstrapListGroup() {
             </ListGroupItem>
             <ListGroupItem color='primary' tag='button' action onClick={()=>{console.log('primary!')}}>
                 primary button action
+            </ListGroupItem>
+        </ListGroup>
+        <br/>
+        <ListGroup>
+            <ListGroupItem>
+                <ListGroupItemHeading>ListGroupItemHeading</ListGroupItemHeading>
+                <ListGroupItemText>ListGroupItemText</ListGroupItemText>
+            </ListGroupItem>
+            <ListGroupItem color='primary'>
+                <ListGroupItemHeading>ListGroupItemHeading</ListGroupItemHeading>
+                <ListGroupItemText>ListGroupItemText</ListGroupItemText>
             </ListGroupItem>
         </ListGroup>
     </div>
