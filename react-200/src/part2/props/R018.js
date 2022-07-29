@@ -39,6 +39,7 @@ function R018() {
             [R021] 필수 값: .isRequired<br/>
             [R022] props key&val 모두 없을 때 default: defaultProps
         </code>
+        <p><a href="https://ko.reactjs.org/docs/typechecking-with-proptypes.html" target="_blank">PropTypes</a></p>
         <PropComponent
             String="string props"
             // Number={200}
