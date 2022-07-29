@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import CDUclass from './CDUclass';
 import CDUfunction from './CDUfunction';
 
-import ReactstrapFade from './part2/reactstrap/R043';
+import ReactstrapForm from './part2/reactstrap/R044';
 
 function App() {
     const [number, setNumber] = useState(0);
@@ -35,7 +35,7 @@ function App() {
             </div>
             <hr></hr>
             {class_function_lifecycle}
-            <ReactstrapFade />
+            <ReactstrapForm />
         </div>
     );
 }
