@@ -6,6 +6,7 @@ import LifeCycleClass from './LifeCycleClass';
 import LifeCycleFunction from './LifeCycleFunction';
 
 import ReactstrapForm from './part2/reactstrap/R044';
+import ReactstrapInputGroup from './part2/reactstrap/R045';
 
 function App() {
     const [age, setAge] = useState(0);
@@ -27,7 +28,7 @@ function App() {
             <hr></hr>
             <LifeCycleFunction age={age} onChangeAge={setAge}/>
             <hr/>
-            {/* <ReactstrapForm /> */}
+            <ReactstrapInputGroup />
         </div>
     );
 }
