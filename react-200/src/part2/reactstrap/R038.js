@@ -1,18 +1,20 @@
 import React, { useState } from 'react'
+import $ from 'jquery'
 import { Badge, Button, ButtonGroup } from 'reactstrap'
 
 function ReactstrapButtonGroup() {
     const [num, setNum] = useState(0)
-    const updownNum = (n)=>{
-        setNum(num + n)
+    const updownNum = e=>{
+        let n = $(e.target).text()
+        setNum(num + Number(n))
     }
 
     return <div style={{padding:10}}>
         <h2>ReactstrapButtonGroup</h2>
         <ButtonGroup>
-            <Button outline onClick={e=> updownNum(-1)}>-1</Button>
-            <Button outline onClick={e=> console.log(num)}>console</Button>
-            <Button outline onClick={e=> updownNum(+1)}>+1</Button>
+            <Button outline onClick={updownNum}>-1</Button>
+            <Button outline onClick={updownNum}>0</Button>
+            <Button outline onClick={updownNum}>+1</Button>
         </ButtonGroup>
         <p>
             num : <Badge color='info'>{num}</Badge>

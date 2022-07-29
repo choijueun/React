@@ -6,6 +6,7 @@ import CDUclass from './CDUclass';
 import CDUfunction from './CDUfunction';
 
 import ReactstrapCollapse from './part2/reactstrap/R042';
+import ReactstrapButtonGroup from './part2/reactstrap/R038';
 
 function App() {
     const [number, setNumber] = useState(0);
@@ -35,7 +36,7 @@ function App() {
             </div>
             <hr></hr>
             {class_function_lifecycle}
-            <ReactstrapCollapse />
+            <ReactstrapButtonGroup />
         </div>
     );
 }
