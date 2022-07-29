@@ -15,7 +15,7 @@ function Cat() {
     },[])
 
   return (
-    <img src={cat} />
+    <img src={cat} style={{maxWidth: 1000}}/>
   )
 }
 
