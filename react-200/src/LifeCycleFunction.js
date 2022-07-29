@@ -24,7 +24,7 @@ function LifeCycleFunction(props) {
     }
 
     return (
-        <div style={{margin:15}}>
+        <div>
             <h2></h2>
             <p>
                 Functional - age: {props.age} <Badge size="sm" onClick={setAge} pill>setAge</Badge>

@@ -18,7 +18,7 @@ function App() {
     }
 
     return (
-        <div className="App">
+        <div className="App" style={{margin:15}}>
             <h1>REACT 200</h1>
             <div>
                 <input type="text" value={age} onChange={changeNumber}></input>
