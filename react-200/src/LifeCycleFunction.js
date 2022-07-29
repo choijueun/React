@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from 'react'
 
-function CDUfunction(props) {
+function LifeCycleFunction(props) {
+    console.log('1. outside function')
+
     // componentDidMount
     useEffect(()=>{
-        console.log('Function: componentDidMount()')
+        console.log('2. Function: componentDidMount()')
         return ()=>{
-            console.log('Function: componentWillUnmount 1')
+            console.log('3. Function: componentWillUnmount 1')
         }
     }, [])
-    // render...
-    console.log('outside function')
     // componentDidUpate
     useEffect(()=>{
-        console.log('Function: componentDidUpdate()');
+        console.log('2. Function: componentDidUpdate()');
         return ()=>{
-            console.log('Function: componentWillUnmount 2')
+            console.log('3. Function: componentWillUnmount 2')
         }
-    }, [props.age])
+    }, [props])
     
     const setAge = ()=>{
         props.onChangeAge(27);
@@ -30,4 +30,4 @@ function CDUfunction(props) {
     )
 }
 
-export default CDUfunction
+export default LifeCycleFunction
