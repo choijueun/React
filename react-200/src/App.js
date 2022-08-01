@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import LifeCycleClass from './LifeCycleClass';
 import LifeCycleFunction from './LifeCycleFunction';
 
-import ReactstrapNavbar from './part2/reactstrap/R049';
+import ReactstrapPagination from './part2/reactstrap/R050';
 
 function App() {
     const [age, setAge] = useState(0);
@@ -27,7 +27,7 @@ function App() {
             <hr></hr>
             <LifeCycleFunction age={age} onChangeAge={setAge}/>
             <hr/>
-            <ReactstrapNavbar />
+            <ReactstrapPagination />
         </div>
     );
 }
