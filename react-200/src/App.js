@@ -2,10 +2,10 @@ import { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css'
 
-import LifeCycleClass from './LifeCycleClass';
+// import LifeCycleClass from './LifeCycleClass';
 import LifeCycleFunction from './LifeCycleFunction';
 
-import ReactstrapPopovers from './part2/reactstrap/R051';
+import ReactstrapProgress from './part2/reactstrap/R052';
 
 function App() {
     const [age, setAge] = useState(0);
@@ -27,7 +27,7 @@ function App() {
             <hr></hr>
             <LifeCycleFunction age={age} onChangeAge={setAge}/>
             <hr/>
-            <ReactstrapPopovers />
+            <ReactstrapProgress />
         </div>
     );
 }
