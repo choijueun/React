@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 // import LifeCycleClass from './LifeCycleClass';
 import LifeCycleFunction from './LifeCycleFunction';
 
-import ReactstrapProgress from './part2/reactstrap/R052';
+import ReactstrapSpinner from './part2/reactstrap/R053';
 
 function App() {
     const [age, setAge] = useState(0);
@@ -27,7 +27,7 @@ function App() {
             <hr></hr>
             <LifeCycleFunction age={age} onChangeAge={setAge}/>
             <hr/>
-            <ReactstrapProgress />
+            <ReactstrapSpinner />
         </div>
     );
 }
