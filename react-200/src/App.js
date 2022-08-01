@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 // import LifeCycleClass from './LifeCycleClass';
 import LifeCycleFunction from './LifeCycleFunction';
 
-import ReactstrapTable from './part2/reactstrap/R054';
+import ReactstrapTab from './part2/reactstrap/R055';
 
 function App() {
     const [age, setAge] = useState(0);
@@ -27,7 +27,7 @@ function App() {
             <hr></hr>
             <LifeCycleFunction age={age} onChangeAge={setAge}/>
             <hr/>
-            <ReactstrapTable />
+            <ReactstrapTab />
         </div>
     );
 }
