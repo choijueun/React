@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import LifeCycleClass from './LifeCycleClass';
 import LifeCycleFunction from './LifeCycleFunction';
 
-import ReactstrapListGroup from './part2/reactstrap/R047';
+import ReactstrapModal from './part2/reactstrap/R048';
 
 function App() {
     const [age, setAge] = useState(0);
@@ -27,7 +27,7 @@ function App() {
             <hr></hr>
             <LifeCycleFunction age={age} onChangeAge={setAge}/>
             <hr/>
-            <ReactstrapListGroup />
+            <ReactstrapModal />
         </div>
     );
 }
