@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 // import LifeCycleClass from './LifeCycleClass';
 import LifeCycleFunction from './LifeCycleFunction';
 
-import CallBackFnc from './part2/R063';
+import CallbackFnc from './part2/R063';
 
 function App() {
     const [age, setAge] = useState(0);
@@ -27,7 +27,7 @@ function App() {
             <hr></hr>
             <LifeCycleFunction age={age} onChangeAge={setAge}/>
             <hr/>
-            <CallBackFnc />
+            <CallbackFnc />
         </div>
     );
 }
