@@ -17,10 +17,21 @@ function PromiseFnc() {
             console.log('3.',rs)
         })
     }
+    const rejectFn = ()=>{
+        new Promise((resolve,reject)=>{
+            // resolve("SUCCESS INFO")
+            reject(Error("ERROR INFO"))
+        }).then(rs=>{
+            console.log('then:',rs)
+        }).catch(rs=>{
+            console.log('catch:',rs)
+        })
+    }
 
     return <>
         <h5>{data}</h5>
         <button onClick={promiseFn}>PROMISE</button>
+        <button onClick={rejectFn}>REJECT</button>
     </>
 }
 
