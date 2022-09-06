@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 // import LifeCycleClass from './LifeCycleClass';
 import LifeCycleFunction from './LifeCycleFunction';
 
-import Sweetalert2Basic from './part2/sweetalert2/R056';
+import AJAXs from './part2/R059';
 
 function App() {
     const [age, setAge] = useState(0);
@@ -27,7 +27,7 @@ function App() {
             <hr></hr>
             <LifeCycleFunction age={age} onChangeAge={setAge}/>
             <hr/>
-            <Sweetalert2Basic />
+            <AJAXs />
         </div>
     );
 }
